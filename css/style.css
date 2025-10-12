@@ -1,0 +1,7 @@
+ pre.prettyprint {
+     width: auto;
+     overflow: auto;
+     max-height: 600px;
+     background-color: #bfc2cb;
+     border-radius: 5px;
+ }

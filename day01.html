@@ -8,7 +8,33 @@
 </head>
 
 <body>
-    <p><a href="https://www.codewars.com/kata/57356c55867b9b7a60000bd7" target="_blank">Basic Mathematical Operations - 基礎運算符號</a></p>
+    <p><a href="https://www.codewars.com/kata/57356c55867b9b7a60000bd7" target="_blank">Basic Mathematical Operations -
+            基礎運算符號</a></p>
+    <pre class="prettyprint">
+        function basicOp(operation, value1, value2) {
+            switch (operation) {
+                case '+':
+                    return value1 + value2;
+                case '-':
+                    return value1 - value2;
+                case '*':
+                    return value1 * value2;
+                case '/':
+                    return value1 / value2;
+                default:
+                    return null; // 如果操作符不符合預期，返回 null
+            }
+        }
+
+        // 測試範例
+        console.log(basicOp('+', 4, 7)); // 11
+        console.log(basicOp('-', 15, 18)); // -3
+        console.log(basicOp('*', 5, 5)); // 25
+        console.log(basicOp('/', 49, 7)); // 7
+
+        //別人
+        //basicOp = (o, v, l) => Function(`return ${v + o + l}`)();
+     </pre>
     <script>
         function basicOp(operation, value1, value2) {
             switch (operation) {
@@ -34,6 +60,8 @@
         //別人
         //basicOp = (o, v, l) => Function(`return ${v + o + l}`)();
     </script>
+
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
 </body>
 
 </html>
