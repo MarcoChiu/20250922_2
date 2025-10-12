@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove String Spaces - 移除字串中的空格 </title>
+</head>
+
+<body>
+    <p><a href="https://www.codewars.com/kata/57eae20f5500ad98e50002c5/solutions/javascript" target="_blank">Remove String Spaces - 移除字串中的空格</a> </p>
+    <script>
+        function noSpace(x) {
+            return x.split("").filter(e => {
+                return e !== " "
+            }).join("");
+        }
+        console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+        //別人
+        //function noSpace(x){return x.split(' ').join('')}
+        //function noSpace(x) { return x.replace(/\s/g, ''); }
+        //function noSpace(x) {  return x.replaceAll(' ', '');}
+    </script>
+</body>
+
+</html>

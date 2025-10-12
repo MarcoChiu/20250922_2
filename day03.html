@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String cleaning - 清掃字串 </title>
+</head>
+
+<body>
+    <p><a href="https://www.codewars.com/kata/57e1e61ba396b3727c000251" target="_blank">String cleaning - 清掃字串</a></p>
+    <script>
+        function stringClean(s) {
+               return s.split("").filter(e => {                
+                return  !isNaN(parseInt(e)) === false
+            }).join("");
+        }
+
+        console.log(stringClean('! !')); // '!!'
+        console.log(stringClean('123456789'));//-> ''
+        console.log(stringClean('This looks5 grea8t!'));// 'This looks great!'
+
+        //別人
+        //function stringClean(s){return s.replace(/\d/g, "");}
+        //function stringClean(s){return s.split('').filter((n) => n != parseInt(n)).join('');}
+    </script>
+</body>
+
+</html>
