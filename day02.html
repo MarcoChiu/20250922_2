@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remove String Spaces - 移除字串中的空格</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>day2 Remove String Spaces - 移除字串中的空格</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <p><a href="https://www.codewars.com/kata/57eae20f5500ad98e50002c5" target="_blank">Remove String Spaces - 移除字串中的空格</a> </p>
-   <pre class="prettyprint">
+    <div class="container">
+        <h2><a href="https://www.codewars.com/kata/57eae20f5500ad98e50002c5" target="_blank">day2 Remove String Spaces -
+                移除字串中的空格</a> </h2>
+        <pre class="prettyprint">
         function noSpace(x) {
             return x.split("").filter(e => {
                 return e !== " "
@@ -22,20 +26,33 @@
         //function noSpace(x) { return x.replace(/\s/g, ''); }
         //function noSpace(x) {  return x.replaceAll(' ', '');}
    </pre>
-   <script>
+    </div>
+    <script>
         function noSpace(x) {
             return x.split("").filter(e => {
                 return e !== " "
             }).join("");
         }
+
+        // 測試範例
         console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+        console.log(noSpace("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"));
+        console.log(noSpace("8aaaaa dddd r     "));
+
         //別人
         //function noSpace(x){return x.split(' ').join('')}
         //function noSpace(x) { return x.replace(/\s/g, ''); }
         //function noSpace(x) {  return x.replaceAll(' ', '');}
     </script>
 
-     <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="./js/nav.js"></script>
 </body>
 
 </html>
