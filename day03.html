@@ -16,8 +16,8 @@
         </h2>
         <pre class="prettyprint">
         function stringClean(s) {
-               return s.split("").filter(e => {                
-                return  !isNaN(parseInt(e)) === false
+            return s.split("").filter(e => {
+                return !isNaN(parseInt(e)) === false;
             }).join("");
         }
 
@@ -27,22 +27,18 @@
 
         //別人
         //function stringClean(s){return s.replace(/\d/g, "");}
-        //function stringClean(s){return s.split('').filter((n) => n != parseInt(n)).join('');}        function stringClean(s) {
-            return s.split("").filter(e => {
-                return !isNaN(parseInt(e)) === false
-            }).join("");
-        }
+        //function stringClean(s){return s.split('').filter((n) => n != parseInt(n)).join('');}
     </pre>
     </div>
     <script>
         function stringClean(s) {
             return s.split("").filter(e => {
-                return !isNaN(parseInt(e)) === false
+                return !isNaN(parseInt(e)) === false;
             }).join("");
         }
 
         console.log(stringClean('! !')); // '!!'
-        console.log(stringClean('123456789'));//-> ''
+        console.log(stringClean('123456789'));//  ''
         console.log(stringClean('This looks5 grea8t!'));// 'This looks great!'
 
         //別人
