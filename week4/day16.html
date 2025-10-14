@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day16-</title>
+    <title>day16-filter、reduce、array create</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,18 +12,35 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day16-</a>
+        <h2><a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044" target="_blank">day16-filter、reduce、array create</a>
         </h2>
-        <pre class="prettyprint">       
+        <pre class="prettyprint">
         </pre>
     </div>
     <script>
-        
+
+        function countPositivesSumNegatives(input) {
+            if (!input || input.length === 0) return [];
+            let r1 = 0;
+            let r2 = 0;
+            if (isNaN)
+                input.forEach(i => {
+                    if (i > 0) {
+                        r1++;
+                    } else if (i < 0) {
+                        r2 += i;
+                    }
+                });
+            return [r1, r2];
+        }
 
         //Solutions       
-        
+        // function countPositivesSumNegatives(input) {
+        //     return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+        // }
+
         // try
-     
+        console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));// [10, -65]
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
