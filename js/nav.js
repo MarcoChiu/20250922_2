@@ -1,28 +1,28 @@
 
 const data = {
-    name: "2025前端培訓班",
+    name: "Codewars函式刷題任務",
     nav: [
         {
-            menu: "每日Codewars函式刷題任務",
+            menu: "week1",
             page: [
                 {
-                    "title": "day1 Basic Mathematical Operations - 基礎運算符號",
-                    "link": "day01.html"
+                    "title": "day1-基礎運算符號",
+                    "link": "../week1/day01.html"
                 },
                 {
-                    "title": "day2 Remove String Spaces - 移除字串中的空格",
-                    "link": "day02.html"
+                    "title": "day2-移除字串中的空格",
+                    "link": "../week1/day02.html"
                 },
                 {
-                    "title": "day3 String cleaning - 清掃字串",
-                    "link": "day03.html"
+                    "title": "day3-清掃字串",
+                    "link": "../week1/day03.html"
                 }
             ]
         }]
 };
 
 const nav = document.createElement('nav');
-nav.classList.add('navbar','bg-dark', 'navbar-expand-lg');
+nav.classList.add('navbar','bg-dark', 'navbar-expand-lg','sticky-top');
 nav.setAttribute('data-bs-theme', 'dark'); 
 document.body.prepend(nav);
 const container_fluid = document.createElement('div');
