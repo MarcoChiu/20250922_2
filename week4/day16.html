@@ -15,10 +15,31 @@
         <h2><a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044" target="_blank">day16-filter、reduce、array create</a>
         </h2>
         <pre class="prettyprint">
+        function countPositivesSumNegatives(input) {
+            if (!input || input.length === 0) return [];
+            let r1 = 0;
+            let r2 = 0;
+            if (isNaN)
+                input.forEach(i => {
+                    if (i > 0) {
+                        r1++;
+                    } else if (i < 0) {
+                        r2 += i;
+                    }
+                });
+            return [r1, r2];
+        }
+
+        //Solutions       
+        // function countPositivesSumNegatives(input) {
+        //     return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+        // }
+
+        // try
+        console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));// [10, -65]
         </pre>
     </div>
     <script>
-
         function countPositivesSumNegatives(input) {
             if (!input || input.length === 0) return [];
             let r1 = 0;

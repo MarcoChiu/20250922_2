@@ -15,6 +15,27 @@
         <h2><a href="https://www.codewars.com/kata/62ad72443809a4006998218a" target="_blank">day17-forEach、reduce</a>
         </h2>
         <pre class="prettyprint">
+        function likeOrDislike(buttons) {
+            let state = 'Nothing';
+            buttons.forEach(function(item,i) {
+                if (buttons[i] === state) {
+                    state = 'Nothing';
+                } else {
+                    state = buttons[i];
+                }
+            });       
+            return state;
+        }
+
+        //Solutions       
+        //const likeOrDislike = (buttons) => buttons.reduce((acc, curr) => curr == acc ? 'Nothing' : curr, 'Nothing');
+
+        // try
+        console.log(likeOrDislike(['Dislike']));//Dislike
+        console.log(likeOrDislike(['Dislike']));// Dislike
+        console.log(likeOrDislike(['Like', 'Like']));// Nothing
+        console.log(likeOrDislike(['Dislike', 'Like']));// Like
+        console.log(likeOrDislike(['Like', 'Dislike', 'Dislike']));// Nothing
         </pre>
     </div>
     <script>
