@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day13-charCodeAt應用</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="https://www.codewars.com/kata/59706036f6e5d1e22d000016" target="_blank">day13-charCodeAt應用</a>
+        </h2>
+        <pre class="prettyprint">
+        function wordsToMarks(string) {
+            let sum = 0;
+            const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            const arrObj = [];
+            arr.forEach((v, i) => {
+                arrObj.push({ [v]: i + 1 });
+            });
+
+            string.split('').forEach(v => {
+                const obj = arrObj.find(o => o[v]);
+                sum += obj[v];
+            });
+            return sum;
+        }
+
+        //Solutions
+        //const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0); 
+
+        // function wordsToMarks(string) {
+        //     return string.split('').reduce((acc, char) => {
+        //         return acc + char.charCodeAt() - 96;
+        //     }, 0);
+        // }
+
+        // function wordsToMarks(string) {
+        //     let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        //     let marks = 0;
+        //     string.split('').forEach((char) => {
+        //         marks += alphabet.indexOf(char) + 1;
+        //     });
+        //     return marks;
+        // }
+
+        // try
+        console.log(wordsToMarks("love"));//54
+        console.log(wordsToMarks("friendship"));//108
+        </pre>
+
+    </div>
+    <script>
+        function wordsToMarks(string) {
+            let sum = 0;
+            const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            const arrObj = [];
+            arr.forEach((v, i) => {
+                arrObj.push({ [v]: i + 1 });
+            });
+
+            string.split('').forEach(v => {
+                const obj = arrObj.find(o => o[v]);
+                sum += obj[v];
+            });
+            return sum;
+        }
+
+        //Solutions
+        //const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0); 
+
+        // function wordsToMarks(string) {
+        //     return string.split('').reduce((acc, char) => {
+        //         return acc + char.charCodeAt() - 96;
+        //     }, 0);
+        // }
+
+        // function wordsToMarks(string) {
+        //     let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        //     let marks = 0;
+        //     string.split('').forEach((char) => {
+        //         marks += alphabet.indexOf(char) + 1;
+        //     });
+        //     return marks;
+        // }
+
+        // try
+        console.log(wordsToMarks("love"));//54
+        console.log(wordsToMarks("friendship"));//108
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

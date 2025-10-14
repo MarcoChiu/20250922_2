@@ -14,15 +14,15 @@ const navList = {
                     "link": "../week1/day02.html"
                 },
                 {
-                    "title": "day3-清掃字串",
+                    "title": "day3-清除字串中數字",
                     "link": "../week1/day03.html"
                 },
                 {
-                    "title": "day4-字串是大寫的嗎？",
+                    "title": "day4-判斷是否為大寫",
                     "link": "../week1/day04.html"
                 },
                 {
-                    "title": "day5-首字大寫",
+                    "title": "day5-英文首字大轉寫",
                     "link": "../week1/day05.html"
                 }
             ]
@@ -31,7 +31,7 @@ const navList = {
             menu: "week2",
             page: [
                 {
-                    "title": "day6-Switch 語法",
+                    "title": "day6-Switch語法",
                     "link": "../week2/day06.html"
                 },
                 {
@@ -39,16 +39,66 @@ const navList = {
                     "link": "../week2/day07.html"
                 },
                 {
-                    "title": "day8-分類新成員",
+                    "title": "day8-多數值判斷",
                     "link": "../week2/day08.html"
                 },
                 {
-                    "title": "day9-測試 1-2-3",
+                    "title": "day9-forEach、map、array應用",
                     "link": "../week2/day09.html"
                 },
                 {
-                    "title": "day10-day10-找尋奇數整數",
+                    "title": "day10-餘數、奇數語法",
                     "link": "../week2/day10.html"
+                }
+            ]
+        },
+        {
+            menu: "week3",
+            page: [
+                {
+                    "title": "day11-奇數數量",
+                    "link": "../week3/day11.html"
+                },
+                {
+                    "title": "day12-filter篩選數字",
+                    "link": "../week3/day12.html"
+                },
+                {
+                    "title": "day13-charCodeAt應用",
+                    "link": "../week3/day13.html"
+                },
+                {
+                    "title": "day14-字串分割、變大寫、合併",
+                    "link": "../week3/day14.html"
+                },
+                {
+                    "title": "day15-",
+                    "link": "../week3/day15.html"
+                }
+            ]
+        },
+        {
+            menu: "week4",
+            page: [
+                {
+                    "title": "day16-",
+                    "link": "../week4/day16.html"
+                },
+                {
+                    "title": "day17-",
+                    "link": "../week4/day17.html"
+                },
+                {
+                    "title": "day18-",
+                    "link": "../week4/day18.html"
+                },
+                {
+                    "title": "day19-",
+                    "link": "../week4/day19.html"
+                },
+                {
+                    "title": "day20-",
+                    "link": "../week4/day20.html"
                 }
             ]
         }

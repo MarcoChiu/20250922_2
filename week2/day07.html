@@ -14,8 +14,8 @@
     <div class="container">
         <h2><a href="https://www.codewars.com/kata/5672a98bdbdd995fad00000f" target="_blank">day7-剪刀石頭布！</a>
         </h2>
-        <pre class="prettyprint">        
-         const rps = (p1, p2) => {
+        <pre class="prettyprint">
+        const rps = (p1, p2) => {
             if (p1 === p2) return "Draw!";
             if ((p1 === "rock" && p2 === "scissors") || (p1 === "scissors" && p2 === "paper") || (p1 === "paper" && p2 === "rock")) {
                 return "Player 1 won!";
@@ -31,13 +31,13 @@
         //     };
         //     return `Player ${/rockscissors|scissorspaper|paperrock/.test(p1 + p2) ? 1 : 2} won!`;
         // }
-        // const rps = (p1, p2) =>
-        //     p1 === p2 ? `Draw!` : `Player ${/ps|rp|sr/.test(p1[0] + p2[0]) + 1} won!`;
+        // const rps = (p1, p2) => p1 === p2 ? `Draw!` : `Player ${/ps|rp|sr/.test(p1[0] + p2[0]) + 1} won!`;
+        //const rps = (p1, p2) => { if (p1 === p2) { return 'Draw!' }; return `Player ${/rockscissors|paperrock|scissorspaper/.test(p1 + p2) ? 1 : 2} won!`; }
 
         // try 
         console.log(rps("rock", "scissors")); // Player 1 won!
         console.log(rps("scissors", "rock")); // Player 2 won!
-        console.log(rps("paper", "paper")); // Draw!       </pre> 
+        console.log(rps("paper", "paper")); // Draw! </pre>
 
     </div>
     <script>
@@ -49,7 +49,7 @@
                 return "Player 2 won!";
             }
         }
-        
+
         // Solutions
         // const rps = (p1, p2) => {
         //     if (p1 === p2) {
@@ -57,8 +57,8 @@
         //     };
         //     return `Player ${/rockscissors|scissorspaper|paperrock/.test(p1 + p2) ? 1 : 2} won!`;
         // }
-        // const rps = (p1, p2) =>
-        //     p1 === p2 ? `Draw!` : `Player ${/ps|rp|sr/.test(p1[0] + p2[0]) + 1} won!`;
+        // const rps = (p1, p2) => p1 === p2 ? `Draw!` : `Player ${/ps|rp|sr/.test(p1[0] + p2[0]) + 1} won!`;
+        //const rps = (p1, p2) => { if (p1 === p2) { return 'Draw!' }; return `Player ${/rockscissors|paperrock|scissorspaper/.test(p1 + p2) ? 1 : 2} won!`; }
 
         // try 
         console.log(rps("rock", "scissors")); // Player 1 won!
