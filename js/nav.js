@@ -104,6 +104,7 @@ const navList = {
         }
     ]
 };
+const baseUrl = location.href.indexOf('127.0.0.1') > 0 || location.href.indexOf('localhost') > 0 ? "" : "/20250922_2";
 
 const nav = document.createElement('nav');
 nav.classList.add('navbar','bg-dark', 'navbar-expand-lg','sticky-top');
@@ -159,7 +160,7 @@ navList.nav.forEach(item => {
         const listItem = document.createElement('li');
         const linkItem = document.createElement('a');
         linkItem.classList.add('dropdown-item');
-        linkItem.href = page.link;
+        linkItem.href = baseUrl + page.link;
         linkItem.textContent = page.title;
 
         listItem.appendChild(linkItem);
