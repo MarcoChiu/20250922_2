@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day8-分類新成員</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa" target="_blank">day8-分類新成員</a>
+        </h2>
+        <pre class="prettyprint">
+        function openOrSenior(data) {
+            //兩個數字 age > 54 和 handicap > 7 => "Senior" 否則 "Open"
+            return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? "Senior" : "Open");
+        }
+
+        // Solutions
+        //const openOrSenior = data => data.map(([age, handicap]) => (age >= 55 && handicap > 7 ? 'Senior' : 'Open'));
+
+        // try 
+        const data = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]];    
+        console.log(openOrSenior(data)); // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+        </pre>
+
+    </div>
+    <script>
+        function openOrSenior(data) {
+            //兩個數字 age > 54 和 handicap > 7 => "Senior" 否則 "Open"
+            return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? "Senior" : "Open");
+        }
+
+        // Solutions
+        //const openOrSenior = data => data.map(([age, handicap]) => (age >= 55 && handicap > 7 ? 'Senior' : 'Open'));
+
+        // try 
+        const data = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]];    
+        console.log(openOrSenior(data)); // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

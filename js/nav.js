@@ -1,5 +1,5 @@
 
-const data = {
+const navList = {
     name: "Codewars函式刷題任務",
     nav: [
         {
@@ -20,9 +20,39 @@ const data = {
                 {
                     "title": "day4-字串是大寫的嗎？",
                     "link": "../week1/day04.html"
+                },
+                {
+                    "title": "day5-首字大寫",
+                    "link": "../week1/day05.html"
                 }
             ]
-        }]
+        },
+        {
+            menu: "week2",
+            page: [
+                {
+                    "title": "day6-Switch 語法",
+                    "link": "../week2/day06.html"
+                },
+                {
+                    "title": "day7-剪刀石頭布！",
+                    "link": "../week2/day07.html"
+                },
+                {
+                    "title": "day8-分類新成員",
+                    "link": "../week2/day08.html"
+                },
+                {
+                    "title": "day9-",
+                    "link": "../week2/day09.html"
+                },
+                {
+                    "title": "day10-",
+                    "link": "../week2/day10.html"
+                }
+            ]
+        }
+    ]
 };
 
 const nav = document.createElement('nav');
@@ -36,7 +66,7 @@ nav.appendChild(container_fluid);
 const brand = document.createElement('a');
 brand.classList.add('navbar-brand');
 brand.href = 'index.html';
-brand.textContent = data.name;
+brand.textContent = navList.name;
 container_fluid.appendChild(brand);
 
 const button = document.createElement('button');
@@ -61,7 +91,7 @@ navMenu.classList.add('navbar-nav');
 collapseDiv.appendChild(navMenu);
 
 // 動態產生選單
-data.nav.forEach(item => {
+navList.nav.forEach(item => {
     const dropdown = document.createElement('li');
     dropdown.classList.add('nav-item', 'dropdown');
     const dropdownToggle = document.createElement('a');
