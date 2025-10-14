@@ -43,11 +43,11 @@ const navList = {
                     "link": "../week2/day08.html"
                 },
                 {
-                    "title": "day9-",
+                    "title": "day9-測試 1-2-3",
                     "link": "../week2/day09.html"
                 },
                 {
-                    "title": "day10-",
+                    "title": "day10-day10-找尋奇數整數",
                     "link": "../week2/day10.html"
                 }
             ]
