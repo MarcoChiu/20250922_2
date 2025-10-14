@@ -85,7 +85,7 @@ const navList = {
                     "link": "/week4/day16.html"
                 },
                 {
-                    "title": "day17-",
+                    "title": "day17-forEach、reduce",
                     "link": "/week4/day17.html"
                 },
                 {
