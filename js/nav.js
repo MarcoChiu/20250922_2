@@ -16,6 +16,10 @@ const data = {
                 {
                     "title": "day3-清掃字串",
                     "link": "../week1/day03.html"
+                },
+                {
+                    "title": "day4-字串是大寫的嗎？",
+                    "link": "../week1/day04.html"
                 }
             ]
         }]
