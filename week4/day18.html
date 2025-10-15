@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day18-</title>
+    <title>day18-day18-split、filter、toLowerCase</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,18 +12,58 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day18-</a>
+        <h2><a href="https://www.codewars.com/kata/55908aad6620c066bc00002a"  target="_blank">day18-split、filter、toLowerCase</a>
         </h2>
-        <pre class="prettyprint">       
+        <pre class="prettyprint">
+        function XO(str) {
+            const x = str.toLowerCase().split('').filter(x => x === 'x');
+            const o = str.toLowerCase().split('').filter(o => o === 'o');
+            return x.length === o.length ? true : false;
+        }
+
+        //Solutions    
+        // function XO(str) {
+        //     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+        // }
+
+        //function XO(str) {
+        //     return str.replace(/o/ig, '').length == str.replace(/x/ig, '').length
+        // }
+
+       // const XO = str => (str.match(/x/gi) || []).length == (str.match(/o/gi) || []).length;
+        
+       // try
+        console.log(XO("ooxx"));//=> true
+        console.log(XO("xooxx"));// => false
+        console.log(XO("ooxXm"));// => true
+        console.log(XO("zpzpzpp"));// => true // when no 'x' and 'o' is present should return true
+        console.log(XO("zzoo"));// => false
         </pre>
     </div>
     <script>
-        
+        function XO(str) {
+            const x = str.toLowerCase().split('').filter(x => x === 'x');
+            const o = str.toLowerCase().split('').filter(o => o === 'o');
+            return x.length === o.length ? true : false;
+        }
 
-        //Solutions       
-        
+        //Solutions    
+        // function XO(str) {
+        //     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+        // }
+
+        //function XO(str) {
+        //     return str.replace(/o/ig, '').length == str.replace(/x/ig, '').length
+        // }
+
+        // const XO = str => (str.match(/x/gi) || []).length == (str.match(/o/gi) || []).length;
+
         // try
-     
+        console.log(XO("ooxx"));//=> true
+        console.log(XO("xooxx"));// => false
+        console.log(XO("ooxXm"));// => true
+        console.log(XO("zpzpzpp"));// => true // when no 'x' and 'o' is present should return true
+        console.log(XO("zzoo"));// => false
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
