@@ -93,7 +93,7 @@ const navList = {
                     "link": "/week4/day18.html"
                 },
                 {
-                    "title": "day19-",
+                    "title": "day19-forEach、map、%、取個位數",
                     "link": "/week4/day19.html"
                 },
                 {
