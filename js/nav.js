@@ -47,7 +47,7 @@ const navList = {
                     "link": "/week2/day09.html"
                 },
                 {
-                    "title": "day10-%、find",
+                    "title": "day10-%、find、取奇數",
                     "link": "/week2/day10.html"
                 }
             ]
@@ -72,7 +72,7 @@ const navList = {
                     "link": "/week3/day14.html"
                 },
                 {
-                    "title": "day15-split、reduce、object?",
+                    "title": "day15-split、reduce、count[s]?",
                     "link": "/week3/day15.html"
                 }
             ]
@@ -81,15 +81,15 @@ const navList = {
             menu: "week4",
             page: [
                 {
-                    "title": "day16-filter、reduce、array create",
+                    "title": "day16-filter、reduce、比對後三元運算塞陣列",
                     "link": "/week4/day16.html"
                 },
                 {
-                    "title": "day17-forEach、reduce",
+                    "title": "day17-forEach、reduce跟下一筆比對",
                     "link": "/week4/day17.html"
                 },
                 {
-                    "title": "day18-day18-split、filter、toLowerCase",
+                    "title": "day18-day18-split、filter、toLowerCase、一行比對方式",
                     "link": "/week4/day18.html"
                 },
                 {
