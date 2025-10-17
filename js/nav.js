@@ -97,8 +97,33 @@ const navList = {
                     "link": "/week4/day19.html"
                 },
                 {
-                    "title": "day20-",
+                    "title": "day20-split、map、join",
                     "link": "/week4/day20.html"
+                }
+            ]
+        },
+        {
+            menu: "week5",
+            page: [
+                {
+                    "title": "day21",
+                    "link": "/week4/day21.html"
+                },
+                {
+                    "title": "day22",
+                    "link": "/week4/day22.html"
+                },
+                {
+                    "title": "day23",
+                    "link": "/week4/day23.html"
+                },
+                {
+                    "title": "day24",
+                    "link": "/week4/day24.html"
+                },
+                {
+                    "title": "day25",
+                    "link": "/week4/day25.html"
                 }
             ]
         }

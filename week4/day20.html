@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day20-</title>
+    <title>day20-split、map、join</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,18 +12,41 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day20-</a>
+        <h2><a href="https://www.codewars.com/kata/5208f99aee097e6552000148" target="_blank">day20-split、map、join</a>
         </h2>
-        <pre class="prettyprint">       
+        <pre class="prettyprint">
+        function solution(string) {
+            return string.split("").map((v, i) => v !== v.toUpperCase() ? v : v = " " + v).join("");
+        }
+
+        //Solutions  
+        // function solution(string) {
+        //     return (string.replace(/([A-Z])/g, ' $1'));
+        // }
+        //const solution = string => string.replace(/[A-Z]/g, ' $&');
+
+        // try
+        console.log(solution("camelCasing"));// =>  "camel Casing"
+        console.log(solution("identifier"));// =>  "identifier"
+        console.log(solution(""));// => ""
         </pre>
     </div>
     <script>
-        
+        function solution(string) {
+            return string.split("").map((v, i) => v !== v.toUpperCase() ? v : v = " " + v).join("");
+        }
 
-        //Solutions       
-        
+        //Solutions  
+        // function solution(string) {
+        //     return (string.replace(/([A-Z])/g, ' $1'));
+        // }
+        //const solution = string => string.replace(/[A-Z]/g, ' $&');
+
         // try
-     
+        console.log(solution("camelCasing"));// =>  "camel Casing"
+        console.log(solution("identifier"));// =>  "identifier"
+        console.log(solution(""));// => ""
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
