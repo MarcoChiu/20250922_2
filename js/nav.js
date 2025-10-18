@@ -141,7 +141,7 @@ nav.appendChild(container_fluid);
 
 const brand = document.createElement('a');
 brand.classList.add('navbar-brand');
-brand.href = 'index.html';
+brand.href = baseUrl +'/index.html';
 brand.textContent = navList.name;
 container_fluid.appendChild(brand);
 
