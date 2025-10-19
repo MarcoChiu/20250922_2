@@ -89,7 +89,7 @@ const navList = {
                     "link": "/week4/day17.html"
                 },
                 {
-                    "title": "day18-day18-split、filter、toLowerCase、一行比對方式",
+                    "title": "day18-split、filter、toLowerCase、一行比對方式",
                     "link": "/week4/day18.html"
                 },
                 {
