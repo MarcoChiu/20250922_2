@@ -107,23 +107,23 @@ const navList = {
             page: [
                 {
                     "title": "day21-day21-while、%、三元運算",
-                    "link": "/week4/day21.html"
+                    "link": "/week5/day21.html"
                 },
                 {
                     "title": "day22",
-                    "link": "/week4/day22.html"
+                    "link": "/week5/day22.html"
                 },
                 {
                     "title": "day23",
-                    "link": "/week4/day23.html"
+                    "link": "/week5/day23.html"
                 },
                 {
                     "title": "day24",
-                    "link": "/week4/day24.html"
+                    "link": "/week5/day24.html"
                 },
                 {
                     "title": "day25",
-                    "link": "/week4/day25.html"
+                    "link": "/week5/day25.html"
                 }
             ]
         }
