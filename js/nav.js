@@ -106,7 +106,7 @@ const navList = {
             menu: "week5",
             page: [
                 {
-                    "title": "day21",
+                    "title": "day21-day21-while、%、三元運算",
                     "link": "/week4/day21.html"
                 },
                 {

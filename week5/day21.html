@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day21-</title>
+    <title>day21-day21-while、%、三元運算</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,12 +12,86 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day21-</a>
+        <h2><a href="https://www.codewars.com/kata/57216d4bcdd71175d6000560" target="_blank">day21-while、%、三元運算</a>
         </h2>
-        <pre class="prettyprint">      
+        <pre class="prettyprint">
+        function padIt(str, n) {
+            let result = str;
+            let i = 0;
+            while (i < n) {
+                if (i % 2 == 0) {
+                    result = '*' + result;
+                } else {
+                    result = result + '*';
+                }
+                i++;
+            }
+            return result;
+        }
+
+        //Solutions  
+        // function padIt(str, n) { //while
+        //     return "*".repeat(Math.ceil(n / 2)) + str + "*".repeat(Math.floor(n / 2))
+        // }
+
+        // function padIt(str, n) {
+        //     while (n--) str = n & 1 ? str + '*' : '*' + str;
+        //     return str;
+        // }
+
+        // function padIt(str, n) {
+        //     while (n > 0) {
+        //         str = n-- % 2 ? '*' + str : str + '*';
+        //     }
+        //     return str;
+        // }
+
+        // try
+        console.log(padIt("a", 1)); //"*a"
+        console.log(padIt("a", 2)); //"*a*");
+        console.log(padIt("a", 3)); //"**a*"/);
+        console.log(padIt("a", 4)); //"**a**");
+        console.log(padIt("a", 5)); //"***a**");
         </pre>
     </div>
-    <script>        
+    <script>
+        function padIt(str, n) {
+            let result = str;
+            let i = 0;
+            while (i < n) {
+                if (i % 2 == 0) {
+                    result = '*' + result;
+                } else {
+                    result = result + '*';
+                }
+                i++;
+            }
+            return result;
+        }
+
+        //Solutions  
+        // function padIt(str, n) { //while
+        //     return "*".repeat(Math.ceil(n / 2)) + str + "*".repeat(Math.floor(n / 2))
+        // }
+
+        // function padIt(str, n) {
+        //     while (n--) str = n & 1 ? str + '*' : '*' + str;
+        //     return str;
+        // }
+
+        // function padIt(str, n) {
+        //     while (n > 0) {
+        //         str = n-- % 2 ? '*' + str : str + '*';
+        //     }
+        //     return str;
+        // }
+
+        // try
+        console.log(padIt("a", 1)); //"*a"
+        console.log(padIt("a", 2)); //"*a*");
+        console.log(padIt("a", 3)); //"**a*"/);
+        console.log(padIt("a", 4)); //"**a**");
+        console.log(padIt("a", 5)); //"***a**");
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
