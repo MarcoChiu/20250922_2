@@ -106,7 +106,7 @@ const navList = {
             menu: "week5",
             page: [
                 {
-                    "title": "day21-day21-while、%、三元運算",
+                    "title": "day21-while、Math.ceil(無條件進位)、Math.floor(無條件捨去)、repeat(重複字串)",
                     "link": "/week5/day21.html"
                 },
                 {
