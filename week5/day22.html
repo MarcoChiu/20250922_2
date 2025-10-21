@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day22-</title>
+    <title>day22-Array.from、Math.pow</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,12 +12,44 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day22-</a>
+        <h2><a href="https://www.codewars.com/kata/5546180ca783b6d2d5000062/" target="_blank">day22-Array.from、Math.pow</a>
         </h2>
-        <pre class="prettyprint">      
+        <pre class="prettyprint">
         </pre>
     </div>
-    <script>        
+    <script>
+
+        function squares(x, n) {
+            const arr = [];
+            if (n < 0)
+                return arr;
+
+            for (let i = 0; i < n; i++) {
+                if (i > 0) {
+                    x = x * x;
+                }
+                arr.push(x);
+            }
+            return arr;
+        }
+
+        // Solutions  
+        // function squares(x, n) {
+        //     return Array.from({ length: n }, (v, k) => Math.pow(x, Math.pow(2, k)))
+        // }
+
+        // function squares(x, n) {
+        //     var ret = [];
+        //     for (var i = 0; i < n; i++) {
+        //         ret.push(x);
+        //         x *= x;
+        //     }
+        //     return ret;
+        // }
+
+        //try
+        console.log(squares(2, 5));//  -->  [2, 4, 16, 256, 65536]
+        console.log(squares(3, 3));//  -->  [3, 9, 81]
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

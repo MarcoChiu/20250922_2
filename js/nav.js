@@ -110,7 +110,7 @@ const navList = {
                     "link": "/week5/day21.html"
                 },
                 {
-                    "title": "day22",
+                    "title": "day22-Array.from、Math.pow",
                     "link": "/week5/day22.html"
                 },
                 {
