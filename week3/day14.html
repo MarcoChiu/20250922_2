@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day14-split、join、match</title>
+    <title>day14-split、join、String.prototype.match(尋找符合回傳陣列)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,7 +12,8 @@
 
 <body>
     <div class="container">
-        <h2><a href="https://www.codewars.com/kata/5966eeb31b229e44eb00007a" target="_blank">day14-split、join、match</a>
+        <h2><a href="https://www.codewars.com/kata/5966eeb31b229e44eb00007a"
+                target="_blank">day14-split、join、String.prototype.match(尋找符合回傳陣列)</a>
         </h2>
         <pre class="prettyprint">
         function vaporcode(string) {
@@ -42,6 +43,25 @@
         console.log(vaporcode("Let's go to the movies"));//"L  E  T  '  S  G  O  T  O  T  H  E  M  O  V  I  E  S"
         console.log(vaporcode("Why isn't my code working?"));//"W  H  Y  I  S  N  '  T  M  Y  C  O  D  E  W  O  R  K  I  N  G  ?"
 
+        let text = "學習JavaScript是一個有趣的過程。";
+        let pattern = /JavaScript/;
+        let result = text.match(pattern);
+        console.log(result);
+
+        // 回傳陣列值
+        // [
+        //   'JavaScript', 
+        //   index: 2,
+        //   input: '學習JavaScript是一個有趣的過程。',
+        //   groups: undefined
+        // ]
+
+        const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
+        const regex = /[A-Z]/g;
+        const found = paragraph.match(regex);
+
+        console.log(found);
+        // Expected output: Array ["T", "I"]
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

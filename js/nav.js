@@ -10,19 +10,19 @@ const navList = {
                     "link": "/week1/day01.html"
                 },
                 {
-                    "title": "day2-split、filter、replace、replaceAll",
+                    "title": "day2-split(分割字串)、filter(篩選)、replace(取代)",
                     "link": "/week1/day02.html"
                 },
                 {
-                    "title": "day3-split、filter、parseInt、join",
+                    "title": "day3-split、filter、parseInt(轉整數)、join(合併)",
                     "link": "/week1/day03.html"
                 },
                 {
-                    "title": "day4-String.prototype、toUpperCase、toLowerCase",
+                    "title": "day4-String.prototype(擴充方法)、toUpperCase(轉大寫)、toLowerCase(轉小寫)",
                     "link": "/week1/day04.html"
                 },
                 {
-                    "title": "day5-String.prototype、toUpperCase、slice",
+                    "title": "day5-String.prototype、toUpperCase、slice(淺拷貝回傳陣列)",
                     "link": "/week1/day05.html"
                 }
             ]
@@ -39,15 +39,15 @@ const navList = {
                     "link": "/week2/day07.html"
                 },
                 {
-                    "title": "day8-map",
+                    "title": "day8-map(for of 回傳key : value)",
                     "link": "/week2/day08.html"
                 },
                 {
-                    "title": "day9-forEach、map return object、array",
+                    "title": "day9-forEach(僅跑迴圈)、map return key : value",
                     "link": "/week2/day09.html"
                 },
                 {
-                    "title": "day10-%、find、取奇數",
+                    "title": "day10-%(取餘數)、find(找第一筆)、^(互斥)",
                     "link": "/week2/day10.html"
                 }
             ]
@@ -56,23 +56,23 @@ const navList = {
             menu: "week3",
             page: [
                 {
-                    "title": "day11-Math.floor、parseInt",
+                    "title": "day11-奇數",
                     "link": "/week3/day11.html"
                 },
                 {
-                    "title": "day12-filter、typeof、Number.isInteger",
+                    "title": "day12-filter、typeof(判斷型別)、Number.isInteger(是否為正負整數)",
                     "link": "/week3/day12.html"
                 },
                 {
-                    "title": "day13-charCodeAt、.、reduce、find",
+                    "title": "day13-charCodeAt(UTF-16 Unicode 碼位)、charAt(第幾個字)、...(Spread Operator)、reduce(a累計值,b目前帶入運算值)、find",
                     "link": "/week3/day13.html"
                 },
                 {
-                    "title": "day14-day14-split、join、match",
+                    "title": "day14-split、join、String.prototype.match(尋找符合回傳陣列)",
                     "link": "/week3/day14.html"
                 },
                 {
-                    "title": "day15-split、reduce、count[s]?",
+                    "title": "day15-split、reduce、count[s]?(三元運算)",
                     "link": "/week3/day15.html"
                 }
             ]
@@ -93,7 +93,7 @@ const navList = {
                     "link": "/week4/day18.html"
                 },
                 {
-                    "title": "day19-forEach、map、%、取個位數",
+                    "title": "day19-forEach、map、%、取個位數方式",
                     "link": "/week4/day19.html"
                 },
                 {
@@ -106,7 +106,7 @@ const navList = {
             menu: "week5",
             page: [
                 {
-                    "title": "day21-while、Math.ceil(無條件進位)、Math.floor(無條件捨去)、repeat(重複字串)",
+                    "title": "day21-while、Math.ceil(無條件進位)、Math.floor(無條件捨去)、String.prototype.repeat(重複字串)",
                     "link": "/week5/day21.html"
                 },
                 {
