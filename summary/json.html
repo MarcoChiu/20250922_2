@@ -15,13 +15,47 @@
         <h2><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON"
                 target="_blank">JSON</a></h2>
         <pre class="prettyprint">
-     
+        //1.屬性名稱必須是包含在雙引號中的字串
+        //2.禁止尾後逗號
+        //3.數字不可以 0 作為開頭；小數點前面必須至少有一位數字；不支援 NaN 和 Infinity。
+
+        //JSON.parse() 方法把會把一個 JSON 字串轉換成 JavaScript 的數值或是物件。另外也可選擇使用 reviver 函數讓這些數值或是物件在被回傳之前做轉換。
+        const s = '[{"name":"Tom","age" :20},{"name":"John","age" :30}]';
+        const a = JSON.parse(s);
+        console.log(a); //[{"name": "Tom", "age": 20 }, {"name": "John", "age": 30 }] 
+
+        //JSON.stringify()方法將一個JavaScript 物件或值轉換為JSON 字串，如果指定了一個replacer 函數，則可以選擇性地替換值，或者指定的replacer 是數組，則可選擇性地僅包含數組指定的屬性。
+        const b = JSON.stringify(s);  //"[{"name":"Tom","age" :20},{"name":"John","age" :30}]"
+        console.log(b);
+
+        //const c = JSON.parse(b);
+        //console.log(c); //[{"name":"Tom","age" :20},{"name":"John","age" :30}]
+
+        //深拷貝 (deep copy)
+        console.log(JSON.parse(JSON.stringify(s)));//[{"name":"Tom","age" :20},{"name":"John","age" :30}]
       </pre>
 
-       
+
     </div>
     <script>
-       
+        //1.屬性名稱必須是包含在雙引號中的字串
+        //2.禁止尾後逗號
+        //3.數字不可以 0 作為開頭；小數點前面必須至少有一位數字；不支援 NaN 和 Infinity。
+
+        //JSON.parse() 方法把會把一個 JSON 字串轉換成 JavaScript 的數值或是物件。另外也可選擇使用 reviver 函數讓這些數值或是物件在被回傳之前做轉換。
+        const s = '[{"name":"Tom","age" :20},{"name":"John","age" :30}]';
+        const a = JSON.parse(s);
+        console.log(a); //[{"name": "Tom", "age": 20 }, {"name": "John", "age": 30 }] 
+
+        //JSON.stringify()方法將一個JavaScript 物件或值轉換為JSON 字串，如果指定了一個replacer 函數，則可以選擇性地替換值，或者指定的replacer 是數組，則可選擇性地僅包含數組指定的屬性。
+        const b = JSON.stringify(s);  //"[{"name":"Tom","age" :20},{"name":"John","age" :30}]"
+        console.log(b);
+
+        //const c = JSON.parse(b);
+        //console.log(c); //[{"name":"Tom","age" :20},{"name":"John","age" :30}]
+
+        //深拷貝 (deep copy)
+        console.log(JSON.parse(JSON.stringify(s)));//[{"name":"Tom","age" :20},{"name":"John","age" :30}]
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
