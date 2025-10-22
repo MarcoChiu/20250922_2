@@ -3,6 +3,15 @@ const navList = {
     name: "Codewars函式刷題任務",
     nav: [
         {
+            menu: "week0",
+            page: [
+                {
+                    "title": "for迴圈總整理",
+                    "link": "/week0/for.html"
+                }
+            ]
+        },
+        {
             menu: "week1",
             page: [
                 {
@@ -114,7 +123,7 @@ const navList = {
                     "link": "/week5/day22.html"
                 },
                 {
-                    "title": "day23",
+                    "title": "day23-Math.pow、reduce",
                     "link": "/week5/day23.html"
                 },
                 {
@@ -132,16 +141,16 @@ const navList = {
 const baseUrl = location.href.indexOf('127.0.0.1') > 0 || location.href.indexOf('localhost') > 0 ? "" : "/20250922_2";
 
 const nav = document.createElement('nav');
-nav.classList.add('navbar','bg-dark', 'navbar-expand-lg','sticky-top');
-nav.setAttribute('data-bs-theme', 'dark'); 
+nav.classList.add('navbar', 'bg-dark', 'navbar-expand-lg', 'sticky-top');
+nav.setAttribute('data-bs-theme', 'dark');
 document.body.prepend(nav);
 const container_fluid = document.createElement('div');
 container_fluid.classList.add('container-fluid');
-nav.appendChild(container_fluid);   
+nav.appendChild(container_fluid);
 
 const brand = document.createElement('a');
 brand.classList.add('navbar-brand');
-brand.href = baseUrl +'/index.html';
+brand.href = baseUrl + '/index.html';
 brand.textContent = navList.name;
 container_fluid.appendChild(brand);
 

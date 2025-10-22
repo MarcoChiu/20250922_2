@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>day23-</title>
+    <title>day23-Math.pow、reduce</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
@@ -12,12 +12,94 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day23-</a>
+        <h2><a href="https://www.codewars.com/kata/55fd2d567d94ac3bc9000064" target="_blank">day23-Math.pow、reduce</a>
         </h2>
-        <pre class="prettyprint">      
+        <pre class="prettyprint">
+
+        function rowSumOddNumbers(n) {
+            var start = n * n - n + 1;
+            let i = 1;
+            let c = [];
+            while (c.length < n) {
+
+                if (i % 2 != 0) {
+                    if (i >= start) {
+                        c.push(i);
+                    }
+                }
+                i++;
+            }
+            return c.reduce((a, b) => a + b, 0);
+        }
+
+        // Solutions  
+
+        //const rowSumOddNumbers = n => Math.pow(n, 3); 
+
+        // function rowSumOddNumbers(n) {
+        //     //return n * n * n;
+        //     return n ** 3
+        // }
+
+        // function rowSumOddNumbers(n) {
+        //     var start = n * n - n + 1;
+        //     var result = 0;
+        //     for (i = 0; i < n; i++) {
+        //         result = result + (start + (i * 2));
+        //     }
+        //     return result;
+        // }
+
+        //try
+        //rowSumOddNumbers(1);
+        //rowSumOddNumbers(2);
+        console.log(rowSumOddNumbers(1));//   1
+        console.log(rowSumOddNumbers(2))  //    3 + 5 = 8
+        console.log(rowSumOddNumbers(42))  //    74088
         </pre>
     </div>
-    <script>        
+    <script>
+
+        function rowSumOddNumbers(n) {
+            var start = n * n - n + 1;
+            let i = 1;
+            let c = [];
+            while (c.length < n) {
+
+                if (i % 2 != 0) {
+                    if (i >= start) {
+                        c.push(i);
+                    }
+                }
+                i++;
+            }
+            return c.reduce((a, b) => a + b, 0);
+        }
+
+        // Solutions  
+
+        //const rowSumOddNumbers = n => Math.pow(n, 3); 
+
+        // function rowSumOddNumbers(n) {
+        //     //return n * n * n;
+        //     return n ** 3
+        // }
+
+        // function rowSumOddNumbers(n) {
+        //     var start = n * n - n + 1;
+        //     var result = 0;
+        //     for (i = 0; i < n; i++) {
+        //         result = result + (start + (i * 2));
+        //     }
+        //     return result;
+        // }
+
+        //try
+        //rowSumOddNumbers(1);
+        //rowSumOddNumbers(2);
+        console.log(rowSumOddNumbers(1));//   1
+        console.log(rowSumOddNumbers(2))  //    3 + 5 = 8
+        console.log(rowSumOddNumbers(42))  //    74088
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

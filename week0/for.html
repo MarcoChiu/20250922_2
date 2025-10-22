@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for迴圈總整理</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>for迴圈總整理</h2>
+        <pre class="prettyprint">
+        const arr1 = [1, 3, 5, 7, 10];
+        const arr2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+        const arr3 = [{ name: "Tom", age: 20, "1_": "abc" }, { name: "John", age: 30, "1_": "def" }, { name: "Marco", age: 40, "1_": "ghi" }];
+        //##########for##########
+        //基本的for
+        for (let i = 0; i < arr1.length; i++) {
+            //console.log(arr1[i]);
+        }
+        //##########for in##########   
+        //主要是跑key值  
+        for (let key in arr2) {
+            // console.log(key);
+            // console.log(arr2[key]);
+        }
+        //##########for of##########  
+        //可以跑出物件
+        for (const v of arr3) {
+            // console.log(v);
+            // console.log(v.name);
+            // console.log(v["1_"]);//特殊字元
+        }
+        //##########while########## 
+        //先檢查條件，再執行內容，至少執行0次
+        let n = 0;
+        let x = 0;
+        while (n < 3) {
+            n++;
+            x += n;
+            // console.log(n);//目前記數
+            // console.log(x);//累加
+        }
+        //先執行內容，再檢查條件，至少執行1次
+        //##########do while########## 
+        let h = 0;
+        do {
+            console.log(h);
+            h++;
+        } while (h < 5);
+      </pre>
+    </div>
+    <script>
+        const arr1 = [1, 3, 5, 7, 10];
+        const arr2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+        const arr3 = [{ name: "Tom", age: 20, "1_": "abc" }, { name: "John", age: 30, "1_": "def" }, { name: "Marco", age: 40, "1_": "ghi" }];
+        //##########for##########
+        //基本的for
+        for (let i = 0; i < arr1.length; i++) {
+            //console.log(arr1[i]);
+        }
+        //##########for in##########   
+        //主要是跑key值  
+        for (let key in arr2) {
+            // console.log(key);
+            // console.log(arr2[key]);
+        }
+        //##########for of##########  
+        //可以跑出物件
+        for (const v of arr3) {
+            // console.log(v);
+            // console.log(v.name);
+            // console.log(v["1_"]);//特殊字元
+        }
+        //##########while########## 
+        //先檢查條件，再執行內容，至少執行0次
+        let n = 0;
+        let x = 0;
+        while (n < 3) {
+            n++;
+            x += n;
+            // console.log(n);//目前記數
+            // console.log(x);//累加
+        }
+        //先執行內容，再檢查條件，至少執行1次
+        //##########do while########## 
+        let h = 0;
+        do {
+            console.log(h);
+            h++;
+        } while (h < 5);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
