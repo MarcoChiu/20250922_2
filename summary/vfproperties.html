@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value、Function properties</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#value_properties"
+                target="_blank">Value、Function properties</a></h2>
+        <pre class="prettyprint">
+        //Infinity 全域屬性是一個代表無限大的數值。
+        console.log((10 ** 1000) === Infinity ? true : false); //true
+        console.log(1000 === Infinity ? true : false); //false
+
+        //undefined 尚未賦值
+
+        //null      
+
+        //NaN 表示「非數值」（Not-A-Number）的數值)
+
+        //##########函數屬性##########
+        //eval()函數會將傳入的字串當作JavaScript 程式碼來執行。        
+        console.log(eval(' 3 * 5 + 3')); //18
+
+        //isNaN()，判斷傳入的值是不是NaN(全域屬性 NaN 表示「非數值」（Not-A-Number）的數值)，不是數字。  
+        console.log(isNaN("123") ? true : false); //false 會轉成數字，他是數字所以是false
+        console.log(isNaN("NotANumber") ? true : false);// true 因為Not-A-Number
+
+        //parseFloat()函數解析一個參數（必要時先轉換為字串）並傳回一個浮點數。
+        console.log(parseFloat("FF2"));//NAN
+        console.log(parseFloat("321.543254").toFixed(2));//321.54 toFixed取小數兩位
+
+        //parseInt() 函式能將輸入的字串轉成整數，要注意是否為float。
+        console.log(parseInt("FF2"));//NAN
+        console.log(parseInt("321.943254"));//321
+
+        //encodeURI()函數透過將特定字元的每個實例替換為一個、兩個、三或四轉義序列來對統一資源標識符(URI) 進行編碼(該字元的UTF-8 編碼僅為四轉義序列) 由兩個"代理" 字元組成)。
+        console.log(encodeURI("http://www.google.com?q=您好&s=--"));//http://www.google.com?q=%E6%82%A8%E5%A5%BD&s=--
+
+        //decodeURI()函數能解碼由encodeURI建立或其他流程所得到的統一資源識別碼（URI）。
+        console.log(decodeURI("http://www.google.com?q=%E6%82%A8%E5%A5%BD&s=--"));//http://www.google.com?q=您好&s=--
+
+        //encodeURIComponent()函數透過將特定字元的每個實例替換成代表字元的UTF-8編碼的一個、兩個、三個或四個轉義序列來編碼URI（只有由兩個「代理」字元組成的字元會被編碼為四個轉義序列）。與encodeURI()相比，此函數會編碼更多的字符，包括URI 語法的一部分。
+        console.log(encodeURIComponent("http://www.google.com?q=您好&s=--")); //http%3A%2F%2Fwww.google.com%3Fq%3D%E6%82%A8%E5%A5%BD%26s%3D--
+
+        //decodeURIComponent()方法用於解碼由encodeURIComponent方法或其他類似方法編碼的部分統一資源標識符（URI）。
+        console.log(decodeURIComponent("http%3A%2F%2Fwww.google.com%3Fq%3D%E6%82%A8%E5%A5%BD%26s%3D--")); //http://www.google.com?q=您好&s=--
+      </pre>
+    </div>
+    <script>
+        //##########數值屬性##########
+        //Infinity 全域屬性是一個代表無限大的數值。
+        console.log((10 ** 1000) === Infinity ? true : false); //true
+        console.log(1000 === Infinity ? true : false); //false
+
+        //undefined 尚未賦值
+
+        //null      
+
+        //NaN 表示「非數值」（Not-A-Number）的數值)
+
+        //##########函數屬性##########
+        //eval()函數會將傳入的字串當作JavaScript 程式碼來執行。        
+        console.log(eval(' 3 * 5 + 3')); //18
+
+        //isNaN()，判斷傳入的值是不是NaN(全域屬性 NaN 表示「非數值」（Not-A-Number）的數值)，不是數字。  
+        console.log(isNaN("123") ? true : false); //false 會轉成數字，他是數字所以是false
+        console.log(isNaN("NotANumber") ? true : false);// true 因為Not-A-Number
+
+        //parseFloat()函數解析一個參數（必要時先轉換為字串）並傳回一個浮點數。
+        console.log(parseFloat("FF2"));//NAN
+        console.log(parseFloat("321.543254"));//321.543254
+
+        //parseInt() 函式能將輸入的字串轉成整數，要注意是否為float。
+        console.log(parseInt("FF2"));//NAN
+        console.log(parseInt("321.943254"));//321
+
+        //encodeURI()函數透過將特定字元的每個實例替換為一個、兩個、三或四轉義序列來對統一資源標識符(URI) 進行編碼(該字元的UTF-8 編碼僅為四轉義序列) 由兩個"代理" 字元組成)。
+        console.log(encodeURI("http://www.google.com?q=您好&s=--"));//http://www.google.com?q=%E6%82%A8%E5%A5%BD&s=--
+
+        //decodeURI()函數能解碼由encodeURI建立或其他流程所得到的統一資源識別碼（URI）。
+        console.log(decodeURI("http://www.google.com?q=%E6%82%A8%E5%A5%BD&s=--"));//http://www.google.com?q=您好&s=--
+
+        //encodeURIComponent()函數透過將特定字元的每個實例替換成代表字元的UTF-8編碼的一個、兩個、三個或四個轉義序列來編碼URI（只有由兩個「代理」字元組成的字元會被編碼為四個轉義序列）。與encodeURI()相比，此函數會編碼更多的字符，包括URI 語法的一部分。
+        console.log(encodeURIComponent("http://www.google.com?q=您好&s=--")); //http%3A%2F%2Fwww.google.com%3Fq%3D%E6%82%A8%E5%A5%BD%26s%3D--
+
+        //decodeURIComponent()方法用於解碼由encodeURIComponent方法或其他類似方法編碼的部分統一資源標識符（URI）。
+        console.log(decodeURIComponent("http%3A%2F%2Fwww.google.com%3Fq%3D%E6%82%A8%E5%A5%BD%26s%3D--")); //http://www.google.com?q=您好&s=--
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

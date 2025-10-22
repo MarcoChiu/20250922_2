@@ -6,24 +6,45 @@ const navList = {
             menu: "常用整理",
             page: [
                 {
-                    "title": "Math",
-                    "link": "/summary/math.html"
+                    "title": "Value、Function properties",
+                    "link": "/summary/vfproperties.html"
                 },
                 {
                     "title": "Number",
                     "link": "/summary/number.html"
                 },
                 {
+                    "title": "Date",
+                    "link": "/summary/date.html"
+                },
+                {
+                    "title": "Math",
+                    "link": "/summary/math.html"
+                },
+                {
+                    "title": "String",
+                    "link": "/summary/string.html"
+                },
+                {
                     "title": "for",
                     "link": "/summary/for.html"
+                },
+                {
+                    "title": "Array",
+                    "link": "/summary/array.html"
+                },
+                {
+                    "title": "JSON",
+                    "link": "/summary/json.html"
                 }
+
             ]
         },
         {
             menu: "week1",
             page: [
                 {
-                    "title": "day1- + - * /",
+                    "title": "day1-Basic Mathematical Operations - 基礎運算符號",
                     "link": "/week1/day01.html"
                 },
                 {

@@ -21,20 +21,20 @@
         //##########for##########
         //基本的for
         for (let i = 0; i < arr1.length; i++) {
-            //console.log(arr1[i]);
+            console.log(arr1[i]); // 1 3 4 7 10
         }
         //##########for in##########   
         //主要是跑key值  
         for (let key in arr2) {
-            // console.log(key);
-            // console.log(arr2[key]);
+            console.log(key); //a b c d e
+            console.log(arr2[key]); //1 2 3 4 5
         }
         //##########for of##########  
         //可以跑出物件
         for (const v of arr3) {
-            // console.log(v);
-            // console.log(v.name);
-            // console.log(v["1_"]);//特殊字元
+            console.log(v); //物件
+            console.log(v.name); //Tom John Marco
+            console.log(v["1_"]);//特殊字元 abc def ght
         }
         //##########while########## 
         //先檢查條件，再執行內容，至少執行0次
@@ -43,14 +43,14 @@
         while (n < 3) {
             n++;
             x += n;
-            // console.log(n);//目前記數
-            // console.log(x);//累加
+            console.log(n);//目前記數 1 2 3
+            console.log(x);//累加 1 3 4
         }
         //先執行內容，再檢查條件，至少執行1次
         //##########do while########## 
         let h = 0;
         do {
-            console.log(h);
+            console.log(h); // 0 1 2 3 4
             h++;
         } while (h < 5);
       </pre>

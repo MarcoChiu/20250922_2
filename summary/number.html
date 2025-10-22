@@ -12,18 +12,92 @@
 
 <body>
     <div class="container">
-        <h2><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number"
+        <h2><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/"
                 target="_blank">Number</a></h2>
         <pre class="prettyprint">
+        //##########方法##########
+        //Number.isNaN()，判斷傳入的值是不是NaN，參考isNaN使用.
 
+        //Number.isFinite()靜態方法判斷傳入值是否為有限數——也就是說，它檢查給定值是一個數字，且該數字既不是正的Infinity，也不是負的Infinity或NaN。
+        console.log(Number.isFinite(1 / 0));//false
+        console.log(Number.isFinite(10 / 5));//true 
+        console.log(Number.isFinite(0 / 0));//false
+
+        //Number.isInteger()，判斷傳入的值是不是一個整數。
+        console.log(Number.isInteger(1) ? true : false);  //true
+        console.log(Number.isInteger(0.1) ? true : false);  //false
+        console.log(Number.isInteger('321s') ? true : false);  //false
+
+        //Number.parseFloat()，這個方法和全域物件的parseFloat()相同。
+
+        //Number.parseInt()，這個方法和全域物件的 parseInt() 相同。      
+
+        //轉型
+        console.log(Number("123")); // 123
+        console.log(Number("12.3")); // 12.3
+        console.log(Number("")); // 0
+        console.log(Number("0x11")); // 17
+        console.log(Number("0b11")); // 3
+        console.log(Number("0o11")); // 9
+        console.log(Number("foo")); // NaN
+        console.log(Number("100a")); // NaN
+
+        //##########實體方法##########
+        //toFixed() 方法會使用定點小數表示法（fixed-point notation）來格式化數字。
+        console.log((123.39840932).toFixed(2)); // 123.40
+
+        //Number值的toLocaleString()方法傳回這個數字特定於語言環境的表示字串。在具有Intl.NumberFormatAPI支援的實作中，此方法僅僅簡單地呼叫了Intl.NumberFormat。
+        //當格式化大量數字時，最好建立一個Intl.NumberFormat對象，並使用其提供的format()方法。
+        //初始化數字或日期
+        console.log(Number(12354).toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' })); //￥12,354
+        console.log(Number(12354).toLocaleString('zh-TW', { style: 'currency', currency: 'TWD' })); //$12,354.00
+        console.log(Number(12354).toLocaleString('zh-TW')); //12,354
       </pre>
     </div>
     <script>
-        //Number.isNaN()，判斷傳入的值是不是NaN(全域屬性 NaN 表示「非數值」（Not-A-Number）的數值)，不是數字。  
-        console.log(isNaN("123") ? true : false); //false 會轉成數字，他是數字所以是false
-        console.log(isNaN("NotANumber") ? true : false);// true 因為Not-A-Number
-     
+        //##########方法##########
+        //Number.isNaN()，判斷傳入的值是不是NaN，參考isNaN使用.
+
+        //Number.isFinite()靜態方法判斷傳入值是否為有限數——也就是說，它檢查給定值是一個數字，且該數字既不是正的Infinity，也不是負的Infinity或NaN。
+        console.log(Number.isFinite(1 / 0));//false
+        console.log(Number.isFinite(10 / 5));//true 
+        console.log(Number.isFinite(0 / 0));//false
+
+        //Number.isInteger()，判斷傳入的值是不是一個整數。
+        console.log(Number.isInteger(1) ? true : false);  //true
+        console.log(Number.isInteger(0.1) ? true : false);  //false
+        console.log(Number.isInteger('321s') ? true : false);  //false
+
+        //Number.parseFloat()，這個方法和全域物件的parseFloat()相同。
+
+        //Number.parseInt()，這個方法和全域物件的 parseInt() 相同。
+
+        //使用 Number 轉換 Date 物件為 Unix 時間戳記
+        var d = new Date("December 17, 1995 03:24:00");
+        console.log(Number(d)); // 819199440000
+
+        //轉型
+        console.log(Number("123")); // 123
+        console.log(Number("12.3")); // 12.3
+        console.log(Number("")); // 0
+        console.log(Number("0x11")); // 17
+        console.log(Number("0b11")); // 3
+        console.log(Number("0o11")); // 9
+        console.log(Number("foo")); // NaN
+        console.log(Number("100a")); // NaN
+
+        //##########實體方法##########
+        //toFixed() 方法會使用定點小數表示法（fixed-point notation）來格式化數字。
+        console.log((123.39840932).toFixed(2)); // 123.40
+
+        //Number值的toLocaleString()方法傳回這個數字特定於語言環境的表示字串。在具有Intl.NumberFormatAPI支援的實作中，此方法僅僅簡單地呼叫了Intl.NumberFormat。
+        //當格式化大量數字時，最好建立一個Intl.NumberFormat對象，並使用其提供的format()方法。
+        //初始化數字或日期
+        console.log(Number(12354).toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' })); //￥12,354
+        console.log(Number(12354).toLocaleString('zh-TW', { style: 'currency', currency: 'TWD' })); //$12,354.00
+        console.log(Number(12354).toLocaleString('zh-TW')); //12,354
     </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

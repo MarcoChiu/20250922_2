@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date"
+                target="_blank">Date</a></h2>
+        <pre class="prettyprint">
+        //使用 Number 轉換 Date 物件為 Unix 時間戳記
+        const d = new Date("December 17, 1995 13:24:00");
+        //Unix 時間戳記 轉換 日期文字
+        console.log(FormatDateTime(Number(d)));
+        function FormatDateTime(UnixTime) {
+            //var a = UnixTime.replace("/Date(", "").replace(")/", "");
+            let date = new Date(parseInt(UnixTime));
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            m = m < 10 ? ('0' + m) : m;
+            let d = date.getDate();
+            d = d < 10 ? ('0' + d) : d;
+            let h = date.getHours();
+            h = h < 10 ? ('0' + h) : h;
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+            minute = minute < 10 ? ('0' + minute) : minute;
+            second = second < 10 ? ('0' + second) : second;
+            return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second;
+        };
+
+        //##########Local##########
+        const now = new Date("1995-02-28 21:15:30");
+        //##########set##########
+        now.setFullYear(1969);
+        now.setMonth(0);
+        now.setDate(1);
+        now.setHours(23);
+        now.setMinutes(11);
+        now.setSeconds(49);
+        now.setMilliseconds(1);
+        //##########get##########
+        console.log(now.getFullYear()); //年
+        console.log(now.getMonth() + 1); //月注意 一月是0、二月是1、十二月是11
+        console.log(now.getDate()); //日
+        console.log(now.getHours()); //小時
+        console.log(now.getMinutes()); //分
+        console.log(now.getSeconds()); //秒
+        console.log(now.getMilliseconds()); //毫秒
+        console.log(now.getDay()); //星期幾 星期日 - 星期六：0 - 6
+
+        //##########UTC##########
+        //台灣時間是UTC+8 所以17:57 UTC是09:57
+        const utc = new Date();
+        //##########set##########
+        // utc.setUTCFullYear(1969);
+        // utc.setUTCMonth(0);
+        // utc.setUTCDate(1);
+        // utc.setUTCHours(23);
+        // utc.setUTCMinutes(11);
+        // utc.setUTCSeconds(49);
+        // utc.setUTCMilliseconds(1);
+        //##########get##########
+        console.log(utc.getUTCFullYear()); //年
+        console.log(utc.getUTCMonth() + 1); //月注意 一月是0、二月是1、十二月是11
+        console.log(utc.getUTCDate()); //日
+        console.log(utc.getUTCHours()); //小時
+        console.log(utc.getUTCMinutes()); //分
+        console.log(utc.getUTCSeconds()); //秒
+        console.log(utc.getUTCMilliseconds()); //毫秒
+        console.log(utc.getUTCDay()); //星期幾 星期日 - 星期六：0 - 6
+      </pre>
+
+        <a href="https://blog.csdn.net/smartsmile2012/article/details/73087810?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7EPaidSort-1-73087810-blog-81947674.235%5Ev43%5Epc_blog_bottom_relevance_base5&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7EPaidSort-1-73087810-blog-81947674.235%5Ev43%5Epc_blog_bottom_relevance_base5&utm_relevant_index=2"
+            target="_blank">JS中Unix时间戳转换日期格式</a>
+    </div>
+    <script>
+        //使用 Number 轉換 Date 物件為 Unix 時間戳記
+        const d = new Date("December 17, 1995 13:24:00");
+        //Unix 時間戳記 轉換 日期文字
+        console.log(FormatDateTime(Number(d)));
+        function FormatDateTime(UnixTime) {
+            //var a = UnixTime.replace("/Date(", "").replace(")/", "");
+            let date = new Date(parseInt(UnixTime));
+            let y = date.getFullYear();
+            let m = date.getMonth() + 1;
+            m = m < 10 ? ('0' + m) : m;
+            let d = date.getDate();
+            d = d < 10 ? ('0' + d) : d;
+            let h = date.getHours();
+            h = h < 10 ? ('0' + h) : h;
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+            minute = minute < 10 ? ('0' + minute) : minute;
+            second = second < 10 ? ('0' + second) : second;
+            return y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second;
+        };
+
+        //##########Local##########
+        const now = new Date("1995-02-28 21:15:30");
+        //##########set##########
+        now.setFullYear(1969);
+        now.setMonth(0);
+        now.setDate(1);
+        now.setHours(23);
+        now.setMinutes(11);
+        now.setSeconds(49);
+        now.setMilliseconds(1);
+        //##########get##########
+        console.log(now.getFullYear()); //年
+        console.log(now.getMonth() + 1); //月注意 一月是0、二月是1、十二月是11
+        console.log(now.getDate()); //日
+        console.log(now.getHours()); //小時
+        console.log(now.getMinutes()); //分
+        console.log(now.getSeconds()); //秒
+        console.log(now.getMilliseconds()); //毫秒
+        console.log(now.getDay()); //星期幾 星期日 - 星期六：0 - 6
+
+        //##########UTC##########
+        //台灣時間是UTC+8 所以17:57 UTC是09:57
+        const utc = new Date();
+        //##########set##########
+        // utc.setUTCFullYear(1969);
+        // utc.setUTCMonth(0);
+        // utc.setUTCDate(1);
+        // utc.setUTCHours(23);
+        // utc.setUTCMinutes(11);
+        // utc.setUTCSeconds(49);
+        // utc.setUTCMilliseconds(1);
+        //##########get##########
+        console.log(utc.getUTCFullYear()); //年
+        console.log(utc.getUTCMonth() + 1); //月注意 一月是0、二月是1、十二月是11
+        console.log(utc.getUTCDate()); //日
+        console.log(utc.getUTCHours()); //小時
+        console.log(utc.getUTCMinutes()); //分
+        console.log(utc.getUTCSeconds()); //秒
+        console.log(utc.getUTCMilliseconds()); //毫秒
+        console.log(utc.getUTCDay()); //星期幾 星期日 - 星期六：0 - 6
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>
