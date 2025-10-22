@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a></h2>
+        <pre class="prettyprint">
+        //Math.floor(x)，回傳不大於 x 的最大整數值，無條件捨去。
+        console.log(Math.floor(3.44));
+
+        //Math.ceil(x)，回傳不小於 x 的最小整數值，無條件進位。
+        console.log(Math.ceil(3.44));
+
+        //Math.pow(x, y)，回傳 x 的 y 次方，也就是 x^y，n次方。
+        console.log(Math.pow(2, 3));
+
+        //Math.random()，回傳一個 0 到 1 之間的偽隨機值，亂數。
+        console.log(Math.random());
+
+        //Math.round(x)，回傳 x 的四捨五入值。
+         console.log(Math.round(3.44));
+         console.log(Math.round(3.5));
+
+        //Math.min([x[, y[, …]]])，回傳給定數值中的最小值。
+        //Math.max([x[, y[, …]]])，回傳給定數值中的最大值。
+        //直接給值
+        console.log(Math.max(1, 5, 8, 2));
+        //陣列
+        const array = [1, 3, 2];
+        console.log(Math.max(...array));
+        //物件
+        const users = [{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }, { name: 'Charlie', age: 35 }];
+        console.log(Math.max(...users.map(user => user.age)));
+      </pre>
+    </div>
+    <script>
+        //Math.floor(x)，回傳不大於 x 的最大整數值，無條件捨去。
+        console.log(Math.floor(3.44));
+
+        //Math.ceil(x)，回傳不小於 x 的最小整數值，無條件進位。
+        console.log(Math.ceil(3.44));
+
+        //Math.pow(x, y)，回傳 x 的 y 次方，也就是 x^y，n次方。
+        console.log(Math.pow(2, 3));
+
+        //Math.random()，回傳一個 0 到 1 之間的偽隨機值，亂數。
+        console.log(Math.random());
+
+        //Math.round(x)，回傳 x 的四捨五入值。
+         console.log(Math.round(3.44));
+         console.log(Math.round(3.5));
+
+        //Math.min([x[, y[, …]]])，回傳給定數值中的最小值。
+        //Math.max([x[, y[, …]]])，回傳給定數值中的最大值。
+        //直接給值
+        console.log(Math.max(1, 5, 8, 2));
+        //陣列
+        const array = [1, 3, 2];
+        console.log(Math.max(...array));
+        //物件
+        const users = [{ name: 'Alice', age: 30 }, { name: 'Bob', age: 25 }, { name: 'Charlie', age: 35 }];
+        console.log(Math.max(...users.map(user => user.age)));
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="../js/nav.js"></script>
+</body>
+
+</html>

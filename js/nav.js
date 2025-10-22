@@ -3,11 +3,15 @@ const navList = {
     name: "Codewars函式刷題任務",
     nav: [
         {
-            menu: "week0",
+            menu: "常用整理",
             page: [
                 {
-                    "title": "for迴圈總整理",
-                    "link": "/week0/for.html"
+                    "title": "for",
+                    "link": "/summary/for.html"
+                },
+                {
+                    "title": "Math",
+                    "link": "/summary/math.html"
                 }
             ]
         },
