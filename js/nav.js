@@ -6,12 +6,16 @@ const navList = {
             menu: "常用整理",
             page: [
                 {
-                    "title": "for",
-                    "link": "/summary/for.html"
-                },
-                {
                     "title": "Math",
                     "link": "/summary/math.html"
+                },
+                {
+                    "title": "Number",
+                    "link": "/summary/number.html"
+                },
+                {
+                    "title": "for",
+                    "link": "/summary/for.html"
                 }
             ]
         },
