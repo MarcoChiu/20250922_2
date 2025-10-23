@@ -15,13 +15,34 @@
         <h2><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
                 target="_blank">Array</a></h2>
         <pre class="prettyprint">
-     
+
       </pre>
 
-       
+
     </div>
     <script>
-       
+
+        const arr2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+
+        //Array.from() 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 Array 實體。
+        //字串轉陣列
+        console.log(Array.from("foo"));//["f", "o", "o"]     
+        //陣列再運算
+        console.log(Array.from([1, 2, 3], (x) => x + x));//[2, 4, 6]  
+        // 產生一個數字序列，有需要產生一個固定大小的陣列時使用
+        // 由於陣列的每個位置都初始化為“undefined”，
+        // 下面的“v”的值將是“undefined”
+        console.log(Array.from({ length: 10 }, (v, i) => Math.pow(2, i))); // 2跑次方 10次     
+
+        //Array.fromAsync()靜態方法可以由一個非同步可迭代物件、可迭代物件或類別數組物件建立一個新的、淺拷貝的Array實例。
+        Array.fromAsync({
+            length: 3,
+            0: Promise.resolve('a'),
+            1: Promise.resolve('b'),
+            2: Promise.resolve('c'),
+        }).then((array) => console.log(array));// [1, 2, 3]
+
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
