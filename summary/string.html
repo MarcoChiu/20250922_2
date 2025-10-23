@@ -16,6 +16,123 @@
                 target="_blank">String</a></h2>
         <pre class="prettyprint">
 
+        //長字串 \n換行
+        let s1 =
+            "This is a very long string which needs " +
+            "to wrap across multiple very lines because " +
+            "otherwise my code is  unreadable.";
+
+        let s2 =
+            "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+
+        console.log(s1);
+        console.log(s2);
+
+        //字串比較
+        var a = "a";
+        var b = "b";
+        if (a < b) console.log(a + " 小於 " + b); // true
+        else if (a > b) console.log(a + " 大於 " + b);
+        else console.log(a + " 和 " + b + " 相等");
+
+        //String.fromCharCode()靜態方法傳回由指定的UTF-16 碼元序列所建立的字串。
+        console.log(String.fromCharCode(189, 43, 190, 61)); //½+¾=
+
+        //String.fromCodePoint()靜態方法將根據指定的碼位序列傳回字串。
+        console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));//☃★♲你   
+
+        //String.charAt()方法傳回一個由給定索引處的單一UTF-16 碼元構成的新字串。取字元:從0開始、空白有算
+        console.log(s1.charAt(10)); //v
+
+        //String.charCodeAt()方法傳回一個整數，表示給定索引處的UTF-16 碼元，其值介於0和65535之間。
+        console.log(s2.charCodeAt());
+        console.log("H".charCodeAt(0));
+
+        //String.codePointAt()方法傳回非負整數，該整數是從給定索引開始的字元的Unicode 碼位值。請注意，索引仍然基於UTF-16 碼元，而不是Unicode 碼位。
+        console.log("Th".codePointAt(1));
+
+        //String.concat()方法將字串參數連接到呼叫的字串上，並傳回一個新的字串。
+        console.log(s1.concat(" ### ", s2));
+
+        //String.endsWith()方法用於判斷字串是否以指定字串結尾，如果是則返回true，否則返回false。
+        //String.startsWith()方法用來判斷當前字串是否以另外一個給定的子字串開頭，並根據判斷結果返回true或false。
+        console.log(s1.endsWith("unreadable.")); //true
+        console.log(s1.startsWith("This")); //true
+        console.log(s1.endsWith("unreadable.", 10)); //false
+        console.log(s1.endsWith("very", 14)); //true 第10~14        
+
+        //String.includes()方法執行區分大小寫的搜索，以確定是否可以在一個字串中找到另一個字串，並根據情況返回true或false。
+        console.log(s1.includes("Very")); //false 
+
+        //String.indexOf()方法在字串中搜尋指定子字串，並傳回其第一次出現的位置索引。它可以接受一個可選的參數指定搜尋的起始位置，如果找到了指定的子字串，則傳回的位置索引大於或等於指定的數字。
+        console.log(s1.indexOf("very")); //查無-1 有會會傳第一個字的index，從0開始
+
+        //String.lastIndexOf()方法搜尋該字串並傳回指定子字串最後一次出現的索引。它可以接受一個可選的起始位置參數，並傳回指定子字串在小於或等於指定數字的索引中的最後一次出現的位置。
+        console.log(s1.lastIndexOf("very")); //查無-1 有會會傳第一個字的index，從0開始
+
+        //String.match()方法檢索字串與正規表示式進行比對的結果。
+        //https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions
+        console.log(s1.match(/[A-Z]/g)); //找大寫
+
+        //padStart()方法用另一個字串填充目前字串（如果需要會重複填充），直到達到給定的長度。填充是從目前字串的開頭開始的。
+        console.log("ab".padStart(20, "0")); //少的字會變成指定的，補在前面
+
+        //String.padEnd()方法會將目前字串從末尾開始填充給定的字串（如果需要會重複填充），直到達到給定的長度。填充是從目前字串的末尾開始的。
+        console.log("ab".padEnd(100, ".")); //少的字會變成指定的，補在後面
+
+        //String.repeat()方法建構並傳回一個新字串，其中包含指定數量的所呼叫的字串副本，這些副本連接在一起。
+        console.log("xx".repeat(10));   //重複字串
+
+        //String.replace()方法傳回一個新字串，其中一個、多個或所有符合的pattern被替換為replacement。pattern可以是字串或RegExp，replacement可以是字串或一個在每次匹配時呼叫的函數。如果pattern是字串，則只會替換第一個符合項目。原始的字串不會改變。
+        console.log(s1.replace("very", "replace"));  //取代只有第一次的
+
+        //string.replaceAll()方法傳回一個新字串，其中所有符合pattern的部分都被替換為replacement。pattern可以是一個字串或一個RegExp，replacement可以是一個字串或一個在每次匹配時呼叫的函數。原始字串保持不變。
+        console.log(s1.replaceAll("is", "replaceAll"));  //取代全部
+
+        //String.search()方法用於在String物件中執行正規表示式的搜索，尋找匹配項。
+        //\w: 相當於 [A-Za-z0-9_]。
+        //\s: 代表任何空白字元。
+        //\w\s 的組合當兩者組合使用時，\w\s 會比對出一個符合 \w 條件的字元，後面緊跟著一個符合 \s 條件的空白字元。 
+        console.log(s1.search(/[^\w\s']/g));
+
+        //String.slice()方法提取字串的一部分，並將其作為新字串傳回，而不修改原始字串。
+        console.log(s1.slice(10)); //indexStart，往後取全部
+        console.log(s1.slice(2, 3)); // indexStart, indexEnd，取兩個index中間文字
+
+        //String.split()方法接受一個模式，透過搜尋模式將字串分割成一個有序的子字串列表，將這些子字串放入數組，並傳回該數組。
+        console.log(s1.split(' ')); //中間空白來分割字串成陣列，可用其他字元
+
+        //String.substring()方法傳回該字串從起始索引到結束索引（不包括）的部分，如果未提供結束索引，則傳回字串末尾的部分。
+        console.log(s1.substring(10)); //indexStart，往後取全部
+        console.log(s1.substring(2, 3)); // indexStart, indexEnd，取兩個index中間文字
+
+        //String.toLocaleLowerCase()方法會根據特定區域設定的大小寫映射規則，將字串轉換為小寫形式並傳回。
+        //String.toLocaleUpperCase()方法會根據特定區域設定的大小寫映射規則，將字串轉換為大寫形式並傳回。
+        console.log(s1.toLocaleLowerCase('TR'));
+        console.log(s1.toLocaleUpperCase('TR'));
+
+        //String.toLowerCase()方法將該字串轉換為小寫形式。
+        //String.toUpperCase()方法將該字串轉換為大寫形式。
+        console.log(s1.toLowerCase());
+        console.log(s1.toUpperCase());
+
+        //String.trim()方法會從字串的兩端移除空白字符，並傳回一個新的字串，而不會修改原始字串。
+        console.log(" fdsa ".trim());
+        //String.trimStart()方法會從字串的開頭移除空白字符，並傳回一個新的字串，而不會修改原始字串。trimLeft()是該方法的別名。
+        console.log(" fdsa ".trimStart());
+        //String.trimEnd()方法會從字串的結尾移除空白字符，並傳回一個新的字串，而不會修改原始字串。trimRight()是該方法的別名。
+        console.log(" fdsa ".trimEnd());
+
+        //String.length資料屬性表示字串的UTF-16 碼元長度。
+        console.log(" fdsa ".length); //空白有算
+
+        //自訂義方法
+        String.prototype.isUpperCase = function () { return this.toUpperCase() === this.toString(); }
+        String.prototype.isLowerCase = function () { return this.toLowerCase() === this.toString(); }
+        console.log(" fdsa ".isUpperCase());
+        console.log(" fdsa ".isLowerCase()); 
       </pre>
 
 
@@ -62,10 +179,12 @@ otherwise my code is unreadable.";
         //String.concat()方法將字串參數連接到呼叫的字串上，並傳回一個新的字串。
         console.log(s1.concat(" ### ", s2));
 
-        //endsWith()方法用於判斷字串是否以指定字串結尾，如果是則返回true，否則返回false。
+        //String.endsWith()方法用於判斷字串是否以指定字串結尾，如果是則返回true，否則返回false。
+        //String.startsWith()方法用來判斷當前字串是否以另外一個給定的子字串開頭，並根據判斷結果返回true或false。
         console.log(s1.endsWith("unreadable.")); //true
+        console.log(s1.startsWith("This")); //true
         console.log(s1.endsWith("unreadable.", 10)); //false
-        console.log(s1.endsWith("very", 14)); //true 第10~14
+        console.log(s1.endsWith("very", 14)); //true 第10~14        
 
         //String.includes()方法執行區分大小寫的搜索，以確定是否可以在一個字串中找到另一個字串，並根據情況返回true或false。
         console.log(s1.includes("Very")); //false 
@@ -95,7 +214,48 @@ otherwise my code is unreadable.";
         //string.replaceAll()方法傳回一個新字串，其中所有符合pattern的部分都被替換為replacement。pattern可以是一個字串或一個RegExp，replacement可以是一個字串或一個在每次匹配時呼叫的函數。原始字串保持不變。
         console.log(s1.replaceAll("is", "replaceAll"));  //取代全部
 
-        //String.prototype.search()
+        //String.search()方法用於在String物件中執行正規表示式的搜索，尋找匹配項。
+        //\w: 相當於 [A-Za-z0-9_]。
+        //\s: 代表任何空白字元。
+        //\w\s 的組合當兩者組合使用時，\w\s 會比對出一個符合 \w 條件的字元，後面緊跟著一個符合 \s 條件的空白字元。 
+        console.log(s1.search(/[^\w\s']/g));
+
+        //String.slice()方法提取字串的一部分，並將其作為新字串傳回，而不修改原始字串。
+        console.log(s1.slice(10)); //indexStart，往後取全部
+        console.log(s1.slice(2, 3)); // indexStart, indexEnd，取兩個index中間文字
+
+        //String.split()方法接受一個模式，透過搜尋模式將字串分割成一個有序的子字串列表，將這些子字串放入數組，並傳回該數組。
+        console.log(s1.split(' ')); //中間空白來分割字串成陣列，可用其他字元
+
+        //String.substring()方法傳回該字串從起始索引到結束索引（不包括）的部分，如果未提供結束索引，則傳回字串末尾的部分。
+        console.log(s1.substring(10)); //indexStart，往後取全部
+        console.log(s1.substring(2, 3)); // indexStart, indexEnd，取兩個index中間文字
+
+        //String.toLocaleLowerCase()方法會根據特定區域設定的大小寫映射規則，將字串轉換為小寫形式並傳回。
+        //String.toLocaleUpperCase()方法會根據特定區域設定的大小寫映射規則，將字串轉換為大寫形式並傳回。
+        console.log(s1.toLocaleLowerCase('TR'));
+        console.log(s1.toLocaleUpperCase('TR'));
+
+        //String.toLowerCase()方法將該字串轉換為小寫形式。
+        //String.toUpperCase()方法將該字串轉換為大寫形式。
+        console.log(s1.toLowerCase());
+        console.log(s1.toUpperCase());
+
+        //String.trim()方法會從字串的兩端移除空白字符，並傳回一個新的字串，而不會修改原始字串。
+        console.log(" fdsa ".trim());
+        //String.trimStart()方法會從字串的開頭移除空白字符，並傳回一個新的字串，而不會修改原始字串。trimLeft()是該方法的別名。
+        console.log(" fdsa ".trimStart());
+        //String.trimEnd()方法會從字串的結尾移除空白字符，並傳回一個新的字串，而不會修改原始字串。trimRight()是該方法的別名。
+        console.log(" fdsa ".trimEnd());
+
+        //String.length資料屬性表示字串的UTF-16 碼元長度。
+        console.log(" fdsa ".length); //空白有算
+
+        //自訂義方法
+        String.prototype.isUpperCase = function () { return this.toUpperCase() === this.toString(); }
+        String.prototype.isLowerCase = function () { return this.toLowerCase() === this.toString(); }
+        console.log(" fdsa ".isUpperCase());
+        console.log(" fdsa ".isLowerCase()); 
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
