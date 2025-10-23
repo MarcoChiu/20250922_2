@@ -12,12 +12,53 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day24-</a>
+        <h2><a href="https://www.codewars.com/kata/5822d89270ca28c85c0000f3/" target="_blank">day24-</a>
         </h2>
-        <pre class="prettyprint">      
+        <pre class="prettyprint">
+        function scramble(str, arr) {
+            let r = [];
+            arr.map((el, i) => {              
+                r[el] = str.charAt(i);
+            });
+            return r.join('');
+        };
+
+        // Solutions 
+        // function scramble(s, a) {
+        //     return a.map((_, i) => s[a.indexOf(i)]).join``;
+        // };
+
+        //const scramble = (str, arr) => arr.map((_, idx) => str[arr.indexOf(idx)]).join(``);
+
+        //try
+        //input: "abcd", [0, 3, 1, 2]
+        //output: "acdb"
+
+        console.log(scramble("abcd", [0, 3, 1, 2]));
         </pre>
     </div>
-    <script>        
+    <script>
+
+        function scramble(str, arr) {
+            let r = [];
+            arr.map((el, i) => {              
+                r[el] = str.charAt(i);
+            });
+            return r.join('');
+        };
+
+        // Solutions 
+        // function scramble(s, a) {
+        //     return a.map((_, i) => s[a.indexOf(i)]).join``;
+        // };
+
+        //const scramble = (str, arr) => arr.map((_, idx) => str[arr.indexOf(idx)]).join(``);
+
+        //try
+        //input: "abcd", [0, 3, 1, 2]
+        //output: "acdb"
+
+        console.log(scramble("abcd", [0, 3, 1, 2]));
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
