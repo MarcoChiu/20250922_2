@@ -48,19 +48,19 @@ const navList = {
                     "link": "/week1/day01.html"
                 },
                 {
-                    "title": "day2-split(分割字串)、filter(篩選)、replace(取代)",
+                    "title": "day2-Remove String Spaces - 移除字串中的空格",
                     "link": "/week1/day02.html"
                 },
                 {
-                    "title": "day3-split、filter、parseInt(轉整數)、join(合併)",
+                    "title": "day3-String cleaning - 清掃字串",
                     "link": "/week1/day03.html"
                 },
                 {
-                    "title": "day4-String.prototype(擴充方法)、toUpperCase(轉大寫)、toLowerCase(轉小寫)",
+                    "title": "day4-Is the string uppercase? - 字串是大寫的嗎？",
                     "link": "/week1/day04.html"
                 },
                 {
-                    "title": "day5-String.prototype、toUpperCase、slice(淺拷貝回傳陣列)",
+                    "title": "day5-Jaden Casing Strings - 首字大寫",
                     "link": "/week1/day05.html"
                 }
             ]
@@ -69,23 +69,23 @@ const navList = {
             menu: "week2",
             page: [
                 {
-                    "title": "day6-Switch",
+                    "title": "day6-Training JS #8: Conditional statement--switch - Switch 語法",
                     "link": "/week2/day06.html"
                 },
                 {
-                    "title": "day7-剪刀石頭布！",
+                    "title": "day7-Rock Paper Scissors! - 剪刀石頭布！",
                     "link": "/week2/day07.html"
                 },
                 {
-                    "title": "day8-map(for of 回傳key : value)",
+                    "title": "day8-Categorize New Member - 分類新成員",
                     "link": "/week2/day08.html"
                 },
                 {
-                    "title": "day9-forEach(僅跑迴圈)、map return key : value",
+                    "title": "day9-Testing 1-2-3 - 測試 1-2-3",
                     "link": "/week2/day09.html"
                 },
                 {
-                    "title": "day10-%(取餘數)、find(找第一筆)、^(互斥)",
+                    "title": "day10-Find the odd int - 找尋奇數整數^(互斥)",
                     "link": "/week2/day10.html"
                 }
             ]
@@ -94,23 +94,23 @@ const navList = {
             menu: "week3",
             page: [
                 {
-                    "title": "day11-奇數",
+                    "title": "day11-Count Odd Numbers below n - 找尋 n 以下的偶數數量",
                     "link": "/week3/day11.html"
                 },
                 {
-                    "title": "day12-filter、typeof(判斷型別)、Number.isInteger(是否為正負整數)",
+                    "title": "day12-List Filtering - 清單過濾",
                     "link": "/week3/day12.html"
                 },
                 {
-                    "title": "day13-charCodeAt(UTF-16 Unicode 碼位)、charAt(第幾個字)、...(Spread Operator)、reduce(a累計值,b目前帶入運算值)、find",
+                    "title": "day13-Love vs friendship - 愛與友情",
                     "link": "/week3/day13.html"
                 },
                 {
-                    "title": "day14-split、join、String.prototype.match(尋找符合回傳陣列)",
+                    "title": "day14-V A P O R C O D E",
                     "link": "/week3/day14.html"
                 },
                 {
-                    "title": "day15-split、reduce、count[s]?(三元運算)",
+                    "title": "day15-Count characters in your string - 記數字串中的字元",
                     "link": "/week3/day15.html"
                 }
             ]
@@ -119,23 +119,23 @@ const navList = {
             menu: "week4",
             page: [
                 {
-                    "title": "day16-filter、reduce、比對後三元運算塞陣列",
+                    "title": "day16-Count of positives / sum of negatives - 算正整數與負總數合",
                     "link": "/week4/day16.html"
                 },
                 {
-                    "title": "day17-forEach、reduce跟下一筆比對",
+                    "title": "day17-Likes Vs Dislikes - 喜歡與不喜歡",
                     "link": "/week4/day17.html"
                 },
                 {
-                    "title": "day18-split、filter、toLowerCase、一行比對方式",
+                    "title": "day18-Exes and Ohs - X 與 O",
                     "link": "/week4/day18.html"
                 },
                 {
-                    "title": "day19-forEach、map、%、取個位數方式",
+                    "title": "day19-Incrementer - 加法器",
                     "link": "/week4/day19.html"
                 },
                 {
-                    "title": "day20-split、map、join",
+                    "title": "day20-Break camelCase - 打斷駝峰命名",
                     "link": "/week4/day20.html"
                 }
             ]
@@ -144,23 +144,23 @@ const navList = {
             menu: "week5",
             page: [
                 {
-                    "title": "day21-while、Math.ceil(無條件進位)、Math.floor(無條件捨去)、String.prototype.repeat(重複字串)",
+                    "title": "day21-Training JS #9: loop statement --while and do..while - 基礎迴圈",
                     "link": "/week5/day21.html"
                 },
                 {
-                    "title": "day22-Array.from、Math.pow",
+                    "title": "day22-Squares sequence - 平方序列",
                     "link": "/week5/day22.html"
                 },
                 {
-                    "title": "day23-Math.pow、reduce",
+                    "title": "day23-Sum of odd numbers 奇數的加總",
                     "link": "/week5/day23.html"
                 },
                 {
-                    "title": "day24-map(產生陣列)、charAt、indexOf、join",
+                    "title": "day24-String Scramble - 重組字串",
                     "link": "/week5/day24.html"
                 },
                 {
-                    "title": "day25-reduce、split、Math.pow",
+                    "title": "day25-Make the Deadfish Swim - 讓死魚游",
                     "link": "/week5/day25.html"
                 }
             ]
