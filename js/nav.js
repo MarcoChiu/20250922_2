@@ -222,8 +222,7 @@ navList.nav.forEach(item => {
     item.page.forEach(page => {
         const listItem = document.createElement('li');
         const linkItem = document.createElement('a');
-        linkItem.classList.add('dropdown-item' );
-         linkItem.classList.add('text-truncate');
+        linkItem.classList.add('dropdown-item' );         
         
         linkItem.href = baseUrl + page.link;
         linkItem.textContent = page.title;
