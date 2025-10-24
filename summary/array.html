@@ -21,8 +21,11 @@
 
     </div>
     <script>
-
+        const arr1 = ["a", "b", "c", "d", "e"];
         const arr2 = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+        const arr3 = [{ name: "Tom", age: 20, "1_": "abc", dogs: ['dog1', 'dog2'] }, { name: "John", age: 30, "1_": "def", dogs: ['dog3', 'dog4'] }, { name: "Marco", age: 40, "1_": "ghi", dogs: ['dog5', 'dog6'] }];
+        const arr4 = [1, 30, 39, 29, 10, 13];
+        const arr5 = [0, 1, 2, [3, 4, [5, 6]]];
 
         //Array.from() 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 Array 實體。
         //字串轉陣列
@@ -35,14 +38,66 @@
         console.log(Array.from({ length: 10 }, (v, i) => Math.pow(2, i))); // 2跑次方 10次     
 
         //Array.fromAsync()靜態方法可以由一個非同步可迭代物件、可迭代物件或類別數組物件建立一個新的、淺拷貝的Array實例。
-        Array.fromAsync({
-            length: 3,
-            0: Promise.resolve('a'),
-            1: Promise.resolve('b'),
-            2: Promise.resolve('c'),
-        }).then((array) => console.log(array));// [1, 2, 3]
+        // Array.fromAsync({
+        //     length: 3,
+        //     0: Promise.resolve('a'),
+        //     1: Promise.resolve('b'),
+        //     2: Promise.resolve('c'),
+        // }).then((array) => console.log(array));// [1, 2, 3]
 
+        //Array.isArray() 函式會檢查傳入的值是否為一個 Array。
+        console.log(Array.isArray([1, 2, 3])); // true
+        console.log(Array.isArray({ foo: 123 })); // false
+        console.log(Array.isArray("foobar")); // false
+        console.log(Array.isArray(undefined)); // false
 
+        //Array.of() 方法會由引數（arguments）的數量來建立一個新的 Array 實體，而不管引數的數量或類型為何。
+        //Array.of() 與 Array 建構式之間的不同在於如何處理整數引數：Array.of(7) 會建立一個擁有單個元素—7—的陣列，而 Array(7) 會建立一個 length 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 undefined 的欄位）。
+        console.log(Array.of(7));// [7]
+        console.log(Array(7)); // [empty × 7]
+
+        //Array.at() 方法接收一個整數值並傳回該索引對應的元素，允許正數和負數。負整數從數組中的最後一個元素開始倒數。
+        console.log(arr3.at(2));
+        console.log(arr3[2]);
+
+        //Array.concat() 方法用於合併兩個或更多的陣列。此方法不會改變原有的陣列，而是返回一個新的陣列。
+        console.log(arr3.concat(arr2)); // 如果合併為物件會將物件加到陣列裡
+
+        //Array.copyWithin() 方法會將陣列中的部分元素進行淺複製，並將其放置於陣列內的另一個位置，同時返回該陣列，但不改變其長度。
+
+        console.log(arr1.copyWithin(1, 3));//["a", "d", "e", "d", "e"] (要到的索引,拿值索引起(含))  
+        console.log(arr1.copyWithin(0, 2, 4));//["e", "d", "d", "d", "e"] (要到的索引,拿值索引起(含) ,拿值索引迄(不含))
+
+        //Array.entries() 方法會回傳一個新的陣列迭代器物件，其中包含陣列中每個索引的鍵／值對。
+        const iterator1 = arr1.entries();
+        console.log(iterator1.next().value);
+        console.log(iterator1.next().value);
+
+        //Array.every() 方法測試一個陣列內的所有元素是否都能通過指定函數的測試。它傳回一個布林值。
+        const isBelowThreshold = (currentValue) => currentValue < 40;
+        console.log(arr4.every(isBelowThreshold)); //true
+
+        //Array.fill() 方法會將陣列中某個範圍內的所有元素更改為靜態值，並回傳修改後的陣列。
+        //console.log(arr4);
+        console.log(arr4.fill(1, 2, 4)); //(填入內容,索引起(含),索引迄(不含))
+
+        //Array.filter() 方法會建立一個給定陣列部分的淺複製，過濾掉未通過所提供函式所實作測試的給定陣列元素。
+        console.log(arr3.filter(x => x.age >= 30)); //顯示大於age >= 30 多筆
+        console.log("Thi4s looks5 grea8t!".split('').filter(n => n != parseInt(n)).join('')); //將數字去除
+        console.log([1, 2, 'aasf', '1', '123', 123].filter(c => typeof c === 'number')); // 回傳類別為數字
+
+        //Array.find() 方法會回傳在提供的陣列中第一個通過所提供測試函式的元素。如果沒有任何值通過測試函式，則回傳 undefined。  
+        //Array.findLast() 方法反向迭代數組，並傳回滿足提供的測試函數的第一個元素的值。如果沒有找到對應元素，則傳回undefined。 
+        console.log(arr3.find(x => x.age >= 30));
+        //Array.findIndex() 方法將依據提供的測試函式，尋找陣列中符合的元素，並返回其 index（索引）。如果沒有符合的對象，將返回 -1 
+        //Array.findLastIndex()方法反向迭代數組，並傳回滿足所提供的測試函數的第一個元素的索引。若沒有找到對應元素，則回傳-1。
+        console.log(arr3.findIndex(x => x.age >= 30));
+
+        //Array.flat() 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
+        //console.log(arr5.flat().flat());
+        console.log(arr5.flat(2)); //2為深度預設1
+
+        
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
