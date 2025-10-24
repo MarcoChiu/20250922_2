@@ -213,7 +213,7 @@ navList.nav.forEach(item => {
     dropdownToggle.href = '#';
     dropdownToggle.role = 'button';
     dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
-    dropdownToggle.setAttribute('aria-expanded', 'false');
+    dropdownToggle.setAttribute('aria-expanded', 'false');    
     dropdownToggle.textContent = item.menu;
 
     const dropdownMenu = document.createElement('ul');
@@ -222,7 +222,9 @@ navList.nav.forEach(item => {
     item.page.forEach(page => {
         const listItem = document.createElement('li');
         const linkItem = document.createElement('a');
-        linkItem.classList.add('dropdown-item');
+        linkItem.classList.add('dropdown-item' );
+         linkItem.classList.add('text-warp');
+        
         linkItem.href = baseUrl + page.link;
         linkItem.textContent = page.title;
 
