@@ -223,7 +223,7 @@ navList.nav.forEach(item => {
         const listItem = document.createElement('li');
         const linkItem = document.createElement('a');
         linkItem.classList.add('dropdown-item' );
-         linkItem.classList.add('text-warp');
+         linkItem.classList.add('text-truncate');
         
         linkItem.href = baseUrl + page.link;
         linkItem.textContent = page.title;
