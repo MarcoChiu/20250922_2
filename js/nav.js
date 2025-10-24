@@ -156,7 +156,7 @@ const navList = {
                     "link": "/week5/day23.html"
                 },
                 {
-                    "title": "day24",
+                    "title": "day24-map(產生陣列)、charAt、indexOf、join",
                     "link": "/week5/day24.html"
                 },
                 {

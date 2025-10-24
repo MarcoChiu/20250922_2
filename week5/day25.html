@@ -12,12 +12,54 @@
 
 <body>
     <div class="container">
-        <h2><a href="" target="_blank">day25-</a>
+        <h2><a href="https://www.codewars.com/kata/51e0007c1f9378fa810002a9" target="_blank">day25-</a>
         </h2>
-        <pre class="prettyprint">      
+        <pre class="prettyprint">
+        // Solutions 
+        // function parse(data) {
+        //     let res = [];
+
+        //     data.split('').reduce((cur, s) => {
+        //         if (s === 'i') cur++; //i 累計 +1
+        //         if (s === 'd') cur--; //d 累計 -1
+        //         if (s === 's') cur = Math.pow(cur, 2); //s 累計平方
+        //         if (s === 'o') res.push(cur); //o 存入陣列
+
+        //         return cur;
+        //     }, 0);
+
+        //     return res;
+        // }
+
+        const parse = data => [...data].reduce(([a, b], val) => val === `i` ? [++a, b] : val === `d` ? [--a, b] : val === `s` ? [a ** 2, b] : val === `o` ? [a, [...b, a]] : [a, b], [0, []])[1];
+
+        // try
+        console.log(parse("iiisdoso"));//[8, 64]
+        console.log(parse("iiisdosodddddiso"));//[8, 64, 3600]
         </pre>
     </div>
-    <script>        
+    <script>
+        // Solutions 
+        // function parse(data) {
+        //     let res = [];
+
+        //     data.split('').reduce((cur, s) => {
+        //         if (s === 'i') cur++; //i 累計 +1
+        //         if (s === 'd') cur--; //d 累計 -1
+        //         if (s === 's') cur = Math.pow(cur, 2); //s 累計平方
+        //         if (s === 'o') res.push(cur); //o 存入陣列
+
+        //         return cur;
+        //     }, 0);
+
+        //     return res;
+        // }
+
+        const parse = data => [...data].reduce(([a, b], val) => val === `i` ? [++a, b] : val === `d` ? [--a, b] : val === `s` ? [a ** 2, b] : val === `o` ? [a, [...b, a]] : [a, b], [0, []])[1];
+
+        // try
+        console.log(parse("iiisdoso"));//[8, 64]
+        console.log(parse("iiisdosodddddiso"));//[8, 64, 3600]
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
